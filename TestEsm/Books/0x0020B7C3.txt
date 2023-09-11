@@ -1,0 +1,14 @@
+<font size='30'><b>Schematic Catalogue: A-147-XW (KAISER)</font></b>
+
+<font size='30'><b>TABLE OF CONTENTS</font></b>
+<b>1. Introduction</b>
+1b. WARNINGS
+1c. Recommended Equipment
+
+<b>2. Power System Schematics</b>
+2a. Battery (MicroCell)
+2b. Electrical Hub (Torso)
+2c. Electrical Hub (Arm)
+2d. Electrical Hub (Combat Systems)
+
+<i>[The table of contents alone continues on for several more pages, describing the creation and maintenance of every piece of the machine's inner workings.]</i>

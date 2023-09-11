@@ -1,0 +1,14 @@
+Client: Infinity LTD - Lucas Drexler
+Job: #48201
+Location: CM Station RC-1
+Target: Ryujin Rothicite Shipment
+
+Instructions:
+- Retrieve rothicite shipment being prepared for 
+  Ryujin Industries. 
+
+- Redirect shipment to:
+   > The Clinic 
+   > ATTN: Dr. Kendrick Lane    
+   > Narion System, Freestar Collective
+- Leave no witnesses.

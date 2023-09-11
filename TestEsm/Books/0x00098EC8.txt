@@ -1,0 +1,6 @@
+Opening files...
+
+    > Failed to open files.
+    > Authorization code needed: Hamza, Rafiq.
+
+If you have lost your code, consult your employee manual to perform a factory reset of this device.

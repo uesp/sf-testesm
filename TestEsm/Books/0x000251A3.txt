@@ -1,0 +1,1 @@
+All recordings are logged and encrypted for internal use. In the event of a crash or derelict ship, files are automatically decrypted.

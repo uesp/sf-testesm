@@ -1,0 +1,406 @@
+== AVMD Record Info ==
+TotalSize   = 21574
+TotalCount  = 25
+AverageSize = 862.96 bytes
+MinSize     = 283 bytes
+MaxSize     = 2494 bytes
+MinVersion  = 552
+MaxVersion  = 552
+1) EDID Subrecord Info: One/Record Required VariableSized 
+	Total Count = 25
+	AverageSize = 61.80 bytes
+	MinSize     = 32 bytes
+	MaxSize     = 72 bytes
+	MinCount    = 1
+	MaxCount    = 1
+2) ITMC Subrecord Info: One/Record Required FixedSize 
+	Total Count = 25
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+3) LNAM Subrecord Info: ManyAllowed VariableSized 
+	Total Count = 189
+	AverageSize = 26.53 bytes
+	MinSize     = 10 bytes
+	MaxSize     = 60 bytes
+	MinCount    = 3
+	MaxCount    = 24
+4) MNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 25
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+5) MODT Subrecord Info: One/Record Required FixedSize 
+	Total Count = 25
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+6) NNAM Subrecord Info: ManyAllowed FixedSize 
+	Total Count = 189
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 3
+	MaxCount    = 24
+7) TNAM Subrecord Info: One/Record Required VariableSized 
+	Total Count = 25
+	AverageSize = 49.60 bytes
+	MinSize     = 19 bytes
+	MaxSize     = 60 bytes
+	MinCount    = 1
+	MaxCount    = 1
+8) VNAM Subrecord Info: ManyAllowed Optional VariableSized 
+	Total Count = 89
+	AverageSize = 87.37 bytes
+	MinSize     = 79 bytes
+	MaxSize     = 94 bytes
+	MinCount    = 0
+	MaxCount    = 14
+9) YNAM Subrecord Info: One/Record Required VariableSized 
+	Total Count = 25
+	AverageSize = 49.60 bytes
+	MinSize     = 19 bytes
+	MaxSize     = 60 bytes
+	MinCount    = 1
+	MaxCount    = 1
+
+
+== COBJ Record Info ==
+TotalSize   = 406
+TotalCount  = 3
+AverageSize = 135.33 bytes
+MinSize     = 134 bytes
+MaxSize     = 136 bytes
+MinVersion  = 552
+MaxVersion  = 552
+1) BNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 3
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+2) CNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 3
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+3) DATA Subrecord Info: One/Record Required FixedSize 
+	Total Count = 3
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+4) DESC Subrecord Info: One/Record Required FixedSize 
+	Total Count = 3
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+5) EDID Subrecord Info: One/Record Required VariableSized 
+	Total Count = 3
+	AverageSize = 40.00 bytes
+	MinSize     = 34 bytes
+	MaxSize     = 44 bytes
+	MinCount    = 1
+	MaxCount    = 1
+6) FNAM Subrecord Info: Optional FixedSize 
+	Total Count = 1
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+7) LRNM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 3
+	AverageSize = 1.00 bytes
+	MinSize     = 1 bytes
+	MaxSize     = 1 bytes
+	MinCount    = 1
+	MaxCount    = 1
+8) NNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 3
+	AverageSize = 2.00 bytes
+	MinSize     = 2 bytes
+	MaxSize     = 2 bytes
+	MinCount    = 1
+	MaxCount    = 1
+9) RECF Subrecord Info: One/Record Required FixedSize 
+	Total Count = 3
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 1
+	MaxCount    = 1
+10) SNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 3
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+11) TNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 3
+	AverageSize = 1.00 bytes
+	MinSize     = 1 bytes
+	MaxSize     = 1 bytes
+	MinCount    = 1
+	MaxCount    = 1
+
+
+== KYWD Record Info ==
+TotalSize   = 493
+TotalCount  = 6
+AverageSize = 82.17 bytes
+MinSize     = 55 bytes
+MaxSize     = 90 bytes
+MinVersion  = 552
+MaxVersion  = 552
+1) CNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 6
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+2) DNAM Subrecord Info: Optional FixedSize 
+	Total Count = 1
+	AverageSize = 7.00 bytes
+	MinSize     = 7 bytes
+	MaxSize     = 7 bytes
+	MinCount    = 0
+	MaxCount    = 1
+3) EDID Subrecord Info: One/Record Required VariableSized 
+	Total Count = 6
+	AverageSize = 44.00 bytes
+	MinSize     = 19 bytes
+	MaxSize     = 53 bytes
+	MinCount    = 1
+	MaxCount    = 1
+4) FNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 6
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+5) TNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 6
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+
+
+== LVLI Record Info ==
+TotalSize   = 167
+TotalCount  = 1
+AverageSize = 167.00 bytes
+MinSize     = 167 bytes
+MaxSize     = 167 bytes
+MinVersion  = 552
+MaxVersion  = 552
+1) EDID Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 33.00 bytes
+	MinSize     = 33 bytes
+	MaxSize     = 33 bytes
+	MinCount    = 1
+	MaxCount    = 1
+2) FLLD Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+3) LLCT Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 1.00 bytes
+	MinSize     = 1 bytes
+	MaxSize     = 1 bytes
+	MinCount    = 1
+	MaxCount    = 1
+4) LLKC Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 12.00 bytes
+	MinSize     = 12 bytes
+	MaxSize     = 12 bytes
+	MinCount    = 1
+	MaxCount    = 1
+5) LVLD Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+6) LVLF Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 2.00 bytes
+	MinSize     = 2 bytes
+	MaxSize     = 2 bytes
+	MinCount    = 1
+	MaxCount    = 1
+7) LVLM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 1.00 bytes
+	MinSize     = 1 bytes
+	MaxSize     = 1 bytes
+	MinCount    = 1
+	MaxCount    = 1
+8) LVLO Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 12.00 bytes
+	MinSize     = 12 bytes
+	MaxSize     = 12 bytes
+	MinCount    = 1
+	MaxCount    = 1
+9) OBND Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 24.00 bytes
+	MinSize     = 24 bytes
+	MaxSize     = 24 bytes
+	MinCount    = 1
+	MaxCount    = 1
+10) ODTY Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+11) ONAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+
+
+== OMOD Record Info ==
+TotalSize   = 578
+TotalCount  = 3
+AverageSize = 192.67 bytes
+MinSize     = 186 bytes
+MaxSize     = 197 bytes
+MinVersion  = 552
+MaxVersion  = 552
+1) DATA Subrecord Info: One/Record Required VariableSized 
+	Total Count = 3
+	AverageSize = 103.67 bytes
+	MinSize     = 103 bytes
+	MaxSize     = 104 bytes
+	MinCount    = 1
+	MaxCount    = 1
+2) DESC Subrecord Info: One/Record Required FixedSize 
+	Total Count = 3
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+3) EDID Subrecord Info: One/Record Required VariableSized 
+	Total Count = 3
+	AverageSize = 37.00 bytes
+	MinSize     = 31 bytes
+	MaxSize     = 41 bytes
+	MinCount    = 1
+	MaxCount    = 1
+4) FLLD Subrecord Info: One/Record Required FixedSize 
+	Total Count = 3
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+5) FULL Subrecord Info: One/Record Required FixedSize 
+	Total Count = 3
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+6) MNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 3
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+
+
+== TES4 Record Info ==
+TotalSize   = 84
+TotalCount  = 1
+AverageSize = 84.00 bytes
+MinSize     = 84 bytes
+MaxSize     = 84 bytes
+MinVersion  = 552
+MaxVersion  = 552
+1) CHGL Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+2) CNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 7.00 bytes
+	MinSize     = 7 bytes
+	MaxSize     = 7 bytes
+	MinCount    = 1
+	MaxCount    = 1
+3) HEDR Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 12.00 bytes
+	MinSize     = 12 bytes
+	MaxSize     = 12 bytes
+	MinCount    = 1
+	MaxCount    = 1
+4) INCC Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+5) MAST Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 14.00 bytes
+	MinSize     = 14 bytes
+	MaxSize     = 14 bytes
+	MinCount    = 1
+	MaxCount    = 1
+6) SNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 7.00 bytes
+	MinSize     = 7 bytes
+	MaxSize     = 7 bytes
+	MinCount    = 1
+	MaxCount    = 1
+
+
+== Top Level Records/Groups ==
+
+	TES4 (Record)
+	KYWD (Group)
+	LVLI (Group)
+	COBJ (Group)
+	OMOD (Group)
+	AVMD (Group)
+
+

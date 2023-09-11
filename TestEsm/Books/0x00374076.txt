@@ -1,0 +1,5 @@
+Goddamnit. The voice registry is bugged, and isn't recognizing any of the secondary names for the crew. Edits are also broken.
+
+Which means the joke names Nichols entered as PRIMARY into the system are going to be what we use to identify individual users. Thankfully the global functions look like they work, and I've set the current crew to be protected. It'll only be a problem if someone removes the combat inhibitors and we need to redo protections in the heat of battle.
+
+Testing these prototypes is always a hassle. I need to ask for more creds next time.

@@ -1,0 +1,19 @@
+Threat Level: None
+
+Schedule (Approximate Local Time):
+07:30 - Leaves Luxe Condos for work at Deimos Staryards.
+   | Deimos Staryards
+11:00 - Leaves for lunch. Frequents Jane's Goods.
+   | Jane's Goods
+13:30 - Returns to work. Remains at office until day is over.
+   | Deimos Staryards
+17:00 - Leaves work for the Broken Spear.
+   | The Broken Spear
+22:30 - Returns to Luxe Condos.
+   | Luxe Condos
+
+Home:
+[Temporary] Luxe Condominiums A10
+
+Ship:
+None. Dropped off by Infinity LTD chauffeur.

@@ -1,0 +1,10 @@
+Dear <Token.Title=myName>,
+My name is Abe Levitz, the cabin manager of the ECS Constant, a colony ship that left Earth almost 200 years ago, before its collapse. 
+
+You're receiving this message because distant relatives of your family were on board this ship for generations, and one of them would like to reach out to you to establish communication. I sincerely hope you will consider this rare opportunity to reconnect with long-lost family. I'm sure the two of you will have much to share with one another. 
+
+If you wish to do so, please let my messenger know, and we will establish follow-up communication. Thank you very much for your time and consideration.
+
+Sincerely,
+Abe Levitz
+Cabin Manager, ECS Constant.

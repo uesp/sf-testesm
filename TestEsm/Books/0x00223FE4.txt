@@ -1,0 +1,14 @@
+INCIDENT REPORT
+Author: Maria Hughes, Chief Scientist
+Date of Incident: Revolution 8, Day 64
+Time of Incident: 00:58
+
+At 21:00 on Day 63, I requested that Chief Engineer Rafael Aguerro conduct an out-of-band frequency calibration test on the probe to assess the interference pattern noted by the research team earlier in the day.
+
+Pursuant to that request, he was alone in the lab at the time of the incident. According to data gathered by the Probe Control Unit, the calibration test triggered a catastrophic feedback loop that overloaded the lab's control system and caused a cascading series of failures, including the destruction of key failsafes, the explosion of volatile storage tanks, and a major cave-in or collapse of unknown severity. Rafael is presumed to have died in the explosion.
+
+The incident triggered an automated security lockdown on the research level. As the incident also destroyed our connection to the research level's control system, we have been unable to lift the lockdown or access the lab.
+
+The Probe Control Unit indicates that the probe somehow survived the incident and continues to run, albeit in a damaged state, at an unstable frequency outside designated experimental parameters. All attempts to shut it down remotely have failed.
+
+I accept full responsibility for the entire incident, including the loss of Mr. Aguerro, the destruction of our facilities, and the irreparable damage to our research program.

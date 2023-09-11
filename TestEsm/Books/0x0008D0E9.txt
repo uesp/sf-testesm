@@ -1,0 +1,15 @@
+Ship: Anansi UC-576B, Cargo Class Transport
+Captain: Malawi Ndiaye
+Primary Cargo: Pure Hydroponics Potatoes
+
+Ship: Jade Swan UC-793A, Cargo Class Transport
+Captain: Huan Daiyu
+Primary Cargo: General Goods
+
+Ship: Clair de Lune UC-887C, Cargo Class Transport
+Captain: Finneas Kimball
+Primary Cargo: Weapons
+
+Ship: Izanagi UC-996C, Cargo Class Transport
+Captain: Kazuhiro Sakaniwa
+Primary Cargo: Ship Supplies

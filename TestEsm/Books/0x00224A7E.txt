@@ -1,0 +1,8 @@
+Raf -
+
+Sorry for the late-night test request. We finally dialed in the voltage this morning, but we've been having trouble calibrating the frequency waveform. Output sensors all look fine, but the intake sensors are showing some kind of phase-shift interference, like we're picking up a reflection of our own beam within the distortion.
+
+For tomorrow's test, we need an intake frequency of 34Ghz, but I can't find an output that gets us there. I've left you a slate with the calibration protocol in the control room, but you'll probably have to experiment with it, as usual. Good luck with this one.
+
+
+- Maria

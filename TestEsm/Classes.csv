@@ -1,0 +1,9 @@
+FormID, EditorID, Name, Desc
+0x00002F64, "SecurityGuardClass", "Security Guard", ""
+0x00010B2F, "CrimsonFleetClass", "Crimson Fleet", ""
+0x0001326B, "Citizen", "Citizen", ""
+0x0005F970, "raiderClass", "Raider", ""
+0x00123E22, "TurretClass", "Turret", ""
+0x001CD0A8, "ZeroSPECIALclass", "Player Class", ""
+0x001CD0A9, "GenericCombatant", "Combatant", ""
+0x0020F487, "CourserClass", "Courser", ""

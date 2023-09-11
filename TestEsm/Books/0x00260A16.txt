@@ -1,0 +1,8 @@
+The authorized Staryard representative named <Alias=QuestGiver> (herein "Staryard") enters into a binding contract with <Alias=Player> (herein "Deliverer) for the following:
+
+Delivery of the specified units of <Alias=ResourceName>
+For a price of TWICE the standard trading rate of CREDITS per unit
+
+Upon full delivery of all units specified sum will be paid by Staryard to Deliverer.
+
+This contract is non-transferable and will expire if delivery is not completed in THREE solar years.

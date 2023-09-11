@@ -1,0 +1,1 @@
+The <Alias=Treasure> is in a safe place in the <Alias=DungeonLocation> on <Alias=TargetPlanet>. 

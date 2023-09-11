@@ -1,0 +1,7 @@
+With the turret system in place, taking out the crew will be simple. I'll just need to prep the system with two commands:
+
+EARS, activate all and remove combat inhibitors.
+
+EARS, protect Micke Josefsson.
+
+Once the turrets are active and the crew is dead, I can safely deliver the prototype to my contacts at DRONE. I've been told the price for this tech could be quite lucrative.

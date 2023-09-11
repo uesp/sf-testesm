@@ -1,0 +1,18 @@
+Monday:
+- Crate locked
+- No water
+- Sun mild
+
+Tuesday:
+- Crate locked
+- No water
+- Sun scorching
+
+Wednesday:
+- Crate locked
+- No water
+- Sun scorching
+
+Thursday:
+- Crate locked
+- No wat

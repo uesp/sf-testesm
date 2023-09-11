@@ -1,0 +1,6 @@
+Breyson,
+
+The latest cipher for the terminal has been updated to "GEN-41A18" as requested. It should be ready to use in the next server refresh in about an hour. If the cipher fails, try turning the system power off then back on again, that should do the trick.
+
+Maurice Trenneman
+Generdyne IT Division

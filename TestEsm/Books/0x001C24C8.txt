@@ -1,0 +1,3 @@
+Tell Woodson to revert that fix from the weapons test. It malfunctioned and luckily enough, there was no live ammo on the factory line models. We really averted disaster on that one. The package he modified even had a dependency that would affect the model As.
+
+There is no excuse, it's been 3 weeks since that change went in and it's been brought up multiple times. I won't ask again.

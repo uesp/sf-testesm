@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{862480A4-8C42-47B5-83FF-69083EA6918D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TestEsm</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\src\starfield\Library;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\src\starfield\Library;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\src\starfield\Library;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\src\starfield\Library;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Library\common\error.cpp" />
+    <ClCompile Include="..\..\Library\common\errorhandler.cpp" />
+    <ClCompile Include="..\..\Library\common\file.cpp" />
+    <ClCompile Include="..\..\Library\common\logfile.cpp" />
+    <ClCompile Include="..\..\Library\common\memfile.cpp" />
+    <ClCompile Include="..\..\Library\common\string.cpp" />
+    <ClCompile Include="..\..\Library\common\time.cpp" />
+    <ClCompile Include="..\..\Library\common\utils.cpp" />
+    <ClCompile Include="..\..\Library\modfile\espfile.cpp" />
+    <ClCompile Include="..\..\Library\modfile\groups\group.cpp" />
+    <ClCompile Include="..\..\Library\modfile\groups\typegroup.cpp" />
+    <ClCompile Include="..\..\Library\modfile\moddefs.cpp" />
+    <ClCompile Include="..\..\Library\modfile\recordcreate.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\AlchRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\AmmoRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\ArmoRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\AvifRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\baserecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\BiomRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\BookRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\CellRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\ClasRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\DialRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\EnchRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\EqupRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\FactRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\FlorRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\FlstRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\FurnRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\GbfmRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\GmstRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\idkeyrecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\idrecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\InfoRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\item1record.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\item2record.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\LctnRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\LscrRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\MgefRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\MiscRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\NpcRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\PerkRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\PndtRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\QustRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\RaceRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\record.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\SpelRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\StdtRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\SunpRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\tes4record.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\weaprecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\WrldRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\rectype.cpp" />
+    <ClCompile Include="..\..\Library\modfile\subrecords\Data2StdtSubrecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\subrecords\datasubrecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\subrecords\DnamPndtSubrecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\subrecords\gmstdatasubrecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\subrecords\HnamPndtSubrecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\subrecords\lstringsubrecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\subrecords\stringsubrecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\subrecords\subrecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\subrecords\VmadSubrecord.cpp" />
+    <ClCompile Include="..\..\Library\stringfile\StringFile.cpp" />
+    <ClCompile Include="TestEsm.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Library\common\error.h" />
+    <ClInclude Include="..\..\Library\common\errorhandler.h" />
+    <ClInclude Include="..\..\Library\common\file.h" />
+    <ClInclude Include="..\..\Library\common\logfile.h" />
+    <ClInclude Include="..\..\Library\common\memfile.h" />
+    <ClInclude Include="..\..\Library\common\platform.h" />
+    <ClInclude Include="..\..\Library\common\string.h" />
+    <ClInclude Include="..\..\Library\common\time.h" />
+    <ClInclude Include="..\..\Library\common\types.h" />
+    <ClInclude Include="..\..\Library\common\utils.h" />
+    <ClInclude Include="..\..\Library\modfile\espfile.h" />
+    <ClInclude Include="..\..\Library\modfile\groups\group.h" />
+    <ClInclude Include="..\..\Library\modfile\groups\typegroup.h" />
+    <ClInclude Include="..\..\Library\modfile\moddefs.h" />
+    <ClInclude Include="..\..\Library\modfile\records\AlchRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\AmmoRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\ArmoRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\AvifRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\baserecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\BiomRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\BookRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\CellRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\ClasRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\DialRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\EnchRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\EqupRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\FactRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\FlorRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\FlstRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\FurnRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\GbfmRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\GmstRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\idkeyrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\idrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\InfoRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\item1record.h" />
+    <ClInclude Include="..\..\Library\modfile\records\item2record.h" />
+    <ClInclude Include="..\..\Library\modfile\records\LctnRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\LscrRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\MgefRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\MiscRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\NpcRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\PerkRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\PndtRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\QustRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\RaceRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\record.h" />
+    <ClInclude Include="..\..\Library\modfile\records\SpelRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\StdtRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\SunpRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\tes4record.h" />
+    <ClInclude Include="..\..\Library\modfile\records\weaprecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\WrldRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\rectype.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\AcbsNpcSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\AmmoDataSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\ArmoDataSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\BnamStdtSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\BookDataSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\boundssubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\bytesubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\Data1StdtSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\Data2StdtSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\Data3StdtSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\datasubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\DnamPndtSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\dwordsubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\EnamPndtSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\EnitAlchSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\EnitSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\floatsubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\FnamPndtSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\formidsubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\gmstdatasubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\GnamPndtSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\HnamPndtSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\LctnDataSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\lstringsubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\MgefDataSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\MiscDataSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\SnamNpcSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\SpitSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\stringsubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\subrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\VmadSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\Wam2Subrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\wgensubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\wordsubrecord.h" />
+    <ClInclude Include="..\..\Library\stringfile\StringFile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\Library\common\zlib\zlibstat.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

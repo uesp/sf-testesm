@@ -1,0 +1,2 @@
+What: <Alias=Treasure>
+Where: <Alias=DungeonLocation> on <Alias=TargetPlanet>.

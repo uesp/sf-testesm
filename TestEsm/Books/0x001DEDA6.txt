@@ -1,0 +1,5 @@
+Regarding the specifications for my interface, I'm going to need to make a few, minor adjustments. GalBank is switching to an orthogonal-hexabit encryption, so I want to crank up the core clock on my arm hardware. You can probably get that equipment from Ryujin.
+
+I also need to have a storage injector port added so I can keep any damn trace packets off my system. It probably wouldn't hurt to throw in some electromag protection too, the electrical system on the Key is terrible, and a short circuit could fry the whole setup. 
+
+Last, but not least, I might need a few cushions for the chair in the Reckoner's Core - they're wearing a bit thin.

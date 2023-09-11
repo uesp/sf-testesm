@@ -1,0 +1,4 @@
+Opening files...
+
+    > Failed to open files.
+    > Decryption code required.

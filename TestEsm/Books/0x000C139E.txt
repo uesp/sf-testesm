@@ -1,0 +1,17 @@
+JABR Logistics Ship A-2. Job number 146789
+Client: United Colonies 
+
+New Atlantis [DELIVERED]
+Dry goods (20 Crates)
+Medical Supplies (4 Crates)
+Consumer Electronics (15 Crates)
+Misc. Consumer Goods (28 Crates)
+
+New Homestead [DELIVERED]
+Medical Supplies (15 Crates)
+Dry Goods (16 Crates)
+
+Cydonia [IN TRANSIT]
+Misc. Consumer Goods (12 Crates)
+Electrical Components (2 crates)
+Construction Materials (30 Crates)

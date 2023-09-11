@@ -1,0 +1,17 @@
+To use EARS, your voice must be registered at the main network terminal with a specific name. Repeat your name five times, as well as all names in the registry, so that they can be accurately recorded. 
+
+Once you are registered, you can utilize the following commands, using AND to issue multiple directives:
+
+EARS, protect (name).
+
+EARS, protect (name) and (name).
+
+EARS, activate turret (number).
+
+EARS, activate all.
+
+EARS, deactivate turret (number).
+
+EARS, deactivate all.
+
+EARS, remove combat inhibitors.

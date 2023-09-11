@@ -1,0 +1,10 @@
+Shipper of Record: KORE KINETICS
+Invoice:
+  THREE crates of MILITARY ARMS AND ARMAMENT
+  ONE crate of DOCUMENTATION AND AMMUNITION
+Destination: SHIPPING CONTAINER RX-15-3, NEON
+Delivery Status: UKNOWN
+
+We have tracked your container to Ebbside Warehouse designated EG1. It will unfortunately take us at least TWO WEEKS to get your shipment due to external factors*. Thank you for your patience.
+
+* Ebbside is considered a hostile war zone by our insurer. A full combat team must accompany the delivery agents.

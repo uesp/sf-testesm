@@ -1,0 +1,10 @@
+1. Ensure all Power Interlocks are engaged.
+2. On the Lab Control Computer, initiate Degaussing.
+3. Toggle the indicated Power Interlocks off, then back on, to degauss.
+4. Verify that all Power Interlocks have been successfully degaussed.
+5. Once all Interlocks have been degaussed, initiate Frequency Calibration.
+    - If the system has not been fully degaussed, this will fail. If it does, restart.
+    - If any Interlock is disengaged, this procedure will abort. If it does, restart.
+6. Select the desired output frequency.
+7. Verify that the intake frequency is stable and meets experimental parameters.
+8. Activate the Primary Calibration Control on the front control console.

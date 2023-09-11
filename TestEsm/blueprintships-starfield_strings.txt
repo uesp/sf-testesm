@@ -1,0 +1,368 @@
+===========ID 0x00007169: Starborn Guardian IV
+===========ID 0x0000716B: Space OX
+===========ID 0x00007284: Nebula II
+===========ID 0x0000731D: Privateer
+===========ID 0x0000736C: Vindicator
+===========ID 0x00007375: Ship
+===========ID 0x00007376: WJS-531
+===========ID 0x00007379: Dolphin
+===========ID 0x00007385: Watchdog
+===========ID 0x0000739D: Pik Up
+===========ID 0x000073A6: Watchdog III
+===========ID 0x000073CF: Privateer II
+===========ID 0x000073DA: Hammerhead
+===========ID 0x000073DC: Satellite
+===========ID 0x000073E0: Polvo Station
+===========ID 0x00007414: Nimitz II
+===========ID 0x00007445: Kfir II
+===========ID 0x00007458: Gladius
+===========ID 0x00007461: Kepler S
+===========ID 0x00007469: Warhammer II
+===========ID 0x00007485: Renegade
+===========ID 0x000074A1: Naginata
+===========ID 0x000074A2: Abandoned Starstation
+===========ID 0x000074A3: Carry ALL II
+===========ID 0x000074A4: Generic Class A 03
+===========ID 0x000074A5: Stormrider
+===========ID 0x000074A6: Crossbow
+===========ID 0x000074AB: Chimera II
+===========ID 0x000074D9: Tier VI Simulated Ship
+===========ID 0x00007510: Outpost Starstation
+===========ID 0x00007514: Sunsail
+===========ID 0x00007518: Starborn Guardian III
+===========ID 0x0000754C: Big Rig
+===========ID 0x000075F6: Starborn Guardian V
+===========ID 0x000075F9: Transpo II
+===========ID 0x00007635: Thresher
+===========ID 0x00007636: Responder
+===========ID 0x00007638: Sloop
+===========ID 0x0000766F: Dagger II
+===========ID 0x00007692: Econohaul
+===========ID 0x0000773A: Particle Turret
+===========ID 0x00007780: Spacetruk
+===========ID 0x000077AB: Narcissus
+===========ID 0x000077B4: Polis
+===========ID 0x000077C7: Wanderlust
+===========ID 0x000077C8: Narcissus
+===========ID 0x000077F5: Stingray II
+===========ID 0x0000780F: Starborn Guardian
+===========ID 0x00007813: Watchdog II
+===========ID 0x0000781E: Watchdog
+===========ID 0x00007820: Helix
+===========ID 0x0000782D: Scorpius
+===========ID 0x00007832: Crimson Fleet Ship
+===========ID 0x00007845: Trebuchet
+===========ID 0x0000784E: Satellite
+===========ID 0x0000787F: Governor Hurst's Ship
+===========ID 0x00007883: Watchdog
+===========ID 0x0000788E: Kepler R
+===========ID 0x00007894: Warmonger II
+===========ID 0x000078A3: Mustang II
+===========ID 0x000078F0: MULE II
+===========ID 0x000078F1: Pterosaur II
+===========ID 0x000078F3: Caravan
+===========ID 0x000078F4: Slipstream
+===========ID 0x000078F5: Generic Class A 03
+===========ID 0x0000793F: Wendigo
+===========ID 0x0000794E: Test Max Landable
+===========ID 0x00007963: Freighter
+===========ID 0x000079DA: Starborn Guardian VI
+===========ID 0x000079DD: Outpost Orbital Defense
+===========ID 0x00007A0D: Simulated Opponent
+===========ID 0x00007A62: Phalanx II
+===========ID 0x00007A89: Satellite
+===========ID 0x00007A98: Freighter
+===========ID 0x00007AC7: Missile Turret
+===========ID 0x00007AD3: Venture
+===========ID 0x00007ADA: Defensive Battery
+===========ID 0x00007AE6: Celestial
+===========ID 0x00007AE7: Longsword
+===========ID 0x00007AE8: Bireme
+===========ID 0x00007AEF: Galileo
+===========ID 0x00007B14: Freighter
+===========ID 0x00007B25: Reef
+===========ID 0x00007B26: Pelican
+===========ID 0x00007B30: Lil Muv
+===========ID 0x00007B4D: PCH II
+===========ID 0x00007B4E: Starborn Guardian
+===========ID 0x00007B4F: UC Prison Shuttle
+===========ID 0x00007B80: Hoplite
+===========ID 0x00007B84: Falcon
+===========ID 0x00007B8C: Achilles
+===========ID 0x00007BDE: Hulker
+===========ID 0x00007BE9: Railstar II
+===========ID 0x00007BEA: Atlas II
+===========ID 0x00007BEC: Asphalt CB
+===========ID 0x00007BEE: Dullahan
+===========ID 0x00007BEF: Stronghold
+===========ID 0x00007BF1: Autobahn
+===========ID 0x00007C14: Dragonfire
+===========ID 0x00007C51: Starborn Guardian II
+===========ID 0x00007C54: Default Player Ship
+===========ID 0x00007C72: Raptor
+===========ID 0x0002E238: The Sonder
+===========ID 0x0002E243: Retrofitted Starstation
+===========ID 0x0002E2E1: Sparrow II
+===========ID 0x0002E2E7: Sparrow III
+===========ID 0x0002E2EB: Sparrow
+===========ID 0x0002E2ED: Hammerhead III
+===========ID 0x0002E2F5: Frontier
+===========ID 0x0002E2F6: BSN-728
+===========ID 0x0002E2F8: Hammerhead II
+===========ID 0x0002E2FF: Hoplite III
+===========ID 0x0002E305: Aegis
+===========ID 0x0002E9C4: Ship
+===========ID 0x0002ED4D: Wagontrain
+===========ID 0x0002ED4E: Babylon
+===========ID 0x0002ED56: Falcon IV
+===========ID 0x0002F40F: Starhawk II
+===========ID 0x0002F413: Endeavor II
+===========ID 0x0002FA06: Polis II
+===========ID 0x0002FA0B: Bireme II
+===========ID 0x0002FA0D: Falcon III
+===========ID 0x0002FA0E: Falcon II
+===========ID 0x0002FA0F: Big Rig II
+===========ID 0x0002FA16: Voyager
+===========ID 0x0002FF3F: Razorleaf
+===========ID 0x0003097F: Zumwalt
+===========ID 0x00030DA7: Orca
+===========ID 0x00031247: Starhawk
+===========ID 0x00031248: Rambler
+===========ID 0x00031249: Transpo
+===========ID 0x0003124A: Gladius IV
+===========ID 0x0003124B: Vanquisher
+===========ID 0x0003124C: BSN-728
+===========ID 0x0003124E: Carry ALL III
+===========ID 0x00031250: PCH
+===========ID 0x00031251: Warmonger
+===========ID 0x00031252: Zumwalt III
+===========ID 0x0003125D: Mako
+===========ID 0x0003125E: BSN-728
+===========ID 0x0003125F: Stingray
+===========ID 0x00031261: Wendigo II
+===========ID 0x00031263: Dagger
+===========ID 0x00031271: Gladius II
+===========ID 0x00031277: Kfir
+===========ID 0x0003127B: Vanquisher III
+===========ID 0x0003127C: BSN-728
+===========ID 0x0003127E: Spacetruk II
+===========ID 0x0003127F: Railstar
+===========ID 0x00031280: Pterosaur
+===========ID 0x00031281: Warhammer
+===========ID 0x00031282: Carry ALL
+===========ID 0x00031287: Dagger IV
+===========ID 0x00031288: Kfir IV
+===========ID 0x0003128A: Trebuchet III
+===========ID 0x0003128B: Mako II
+===========ID 0x0003128C: BSN-728
+===========ID 0x0003128D: Pik Up II
+===========ID 0x0003128E: Rambler II
+===========ID 0x0003128F: Transpo III
+===========ID 0x00031297: Crossbow II
+===========ID 0x0003129A: Civshuttle
+===========ID 0x0003129F: Kirov II
+===========ID 0x000312A0: Stormrider III
+===========ID 0x000312A1: Dullahan III
+===========ID 0x000312A2: Crossbow IV
+===========ID 0x000312A5: Orca II
+===========ID 0x000312A6: Hulker III
+===========ID 0x000312A7: Railstar III
+===========ID 0x000312A8: Kirov IV
+===========ID 0x000312B0: Mustang III
+===========ID 0x000312D0: Nimitz III
+===========ID 0x000312EC: Blackhawk II
+===========ID 0x000312ED: Privateer III
+===========ID 0x000312F0: Econohaul II
+===========ID 0x000312F1: Kirov
+===========ID 0x000312F4: Caravan III
+===========ID 0x000312F6: Sunsail II
+===========ID 0x000312F7: Roanoke III
+===========ID 0x000312F8: Spacetruk III
+===========ID 0x000312F9: Venture II
+===========ID 0x000312FA: Venture III
+===========ID 0x000312FB: Asphalt CB III
+===========ID 0x000312FC: Space OX III
+===========ID 0x000312FD: Wagontrain II
+===========ID 0x000312FF: Raptor III
+===========ID 0x00031300: Starhawk III
+===========ID 0x00031301: Celestial II
+===========ID 0x00031304: Voyager II
+===========ID 0x00031305: Highlander II
+===========ID 0x00031306: Babylon II
+===========ID 0x00031309: Blackhawk
+===========ID 0x0003130A: Achilles II
+===========ID 0x0003130B: Pterosaur III
+===========ID 0x000317F5: Kirov III
+===========ID 0x00031802: MULE III
+===========ID 0x00031803: Hulker II
+===========ID 0x00031804: Star Semi
+===========ID 0x00031805: Vista
+===========ID 0x00031806: Crossbow III
+===========ID 0x00031807: Dragonfire II
+===========ID 0x00031808: Dullahan II
+===========ID 0x00031809: Stormrider II
+===========ID 0x0003180A: Reef III
+===========ID 0x0003180B: Renegade III
+===========ID 0x00031813: Vanquisher II
+===========ID 0x00031814: BSN-728
+===========ID 0x0003181A: Nebula
+===========ID 0x0003181D: Murasame
+===========ID 0x0003181F: Watchdog IV
+===========ID 0x00031820: Gladius III
+===========ID 0x00031828: Mustang
+===========ID 0x0003183C: Orca III
+===========ID 0x0003183D: Orca IV
+===========ID 0x0003183F: Chimera
+===========ID 0x00031841: MULE
+===========ID 0x00031844: Sloop II
+===========ID 0x00031846: Longsword IV
+===========ID 0x00031848: Dagger III
+===========ID 0x0003185A: Phalanx III
+===========ID 0x0003185B: Responder II
+===========ID 0x00031867: Pik Up III
+===========ID 0x00031868: Thresher II
+===========ID 0x0003186D: Galileo II
+===========ID 0x0003186E: Galileo III
+===========ID 0x0003186F: Renegade II
+===========ID 0x00031870: Warmonger III
+===========ID 0x00031871: Mako III
+===========ID 0x00031872: BSN-728
+===========ID 0x00031873: Stingray III
+===========ID 0x0003187D: Responder
+===========ID 0x0003187E: Caravan II
+===========ID 0x0003187F: Slipstream II
+===========ID 0x00031882: Pelican II
+===========ID 0x00031883: Asphalt CB II
+===========ID 0x00031884: Space OX II
+===========ID 0x00031885: Wagontrain III
+===========ID 0x00031886: Ranger II
+===========ID 0x00031887: BSN-728
+===========ID 0x00031888: Ranger III
+===========ID 0x00031889: BSN-728
+===========ID 0x0003189D: Civshuttle II
+===========ID 0x0003189E: Lil Muv II
+===========ID 0x0003189F: Autobahn III
+===========ID 0x000318A2: Civshuttle III
+===========ID 0x000318B4: Vista II
+===========ID 0x000318BB: Roanoke II
+===========ID 0x000318C7: Vista III
+===========ID 0x000318C8: Vindicator II
+===========ID 0x000318C9: Warhammer III
+===========ID 0x000318CA: Raptor II
+===========ID 0x000318CB: Achilles III
+===========ID 0x000318CC: Naginata II
+===========ID 0x00031B13: Chimera III
+===========ID 0x00031B17: Nimitz
+===========ID 0x00031B1B: Thresher III
+===========ID 0x00031B2B: Reef II
+===========ID 0x00031B2D: Atlas III
+===========ID 0x00031B34: Kfir III
+===========ID 0x00031B36: Narcissus II
+===========ID 0x00031B37: Longsword III
+===========ID 0x00031B40: Naginata III
+===========ID 0x00031B41: Trebuchet II
+===========ID 0x00031B42: Vindicator III
+===========ID 0x00031B43: Voyager III
+===========ID 0x00031B44: Highlander III
+===========ID 0x00031B45: Longsword II
+===========ID 0x00031B46: Autobahn II
+===========ID 0x00031B47: Dolphin II
+===========ID 0x00031B53: Blackhawk III
+===========ID 0x00031B5A: Star Semi II
+===========ID 0x00031B5B: Ranger IV
+===========ID 0x00031B5C: BSN-728
+===========ID 0x00031C7C: Atlas
+===========ID 0x00031D0A: Conquerer
+===========ID 0x00031D18: Conquerer II
+===========ID 0x00031D19: Conquerer III
+===========ID 0x00031DAF: Spacer Scavenger Blattodea
+===========ID 0x00031DB0: Va'ruun Shroudbearer
+===========ID 0x00031DB1: Ecliptic Battleship Camulus
+===========ID 0x00031E56: Phalanx
+===========ID 0x00031E7D: Discovery
+===========ID 0x000320BA: Scorpius
+===========ID 0x000320BB: Helix
+===========ID 0x000320BC: Helix
+===========ID 0x000320BD: Helix
+===========ID 0x000320BE: Scorpius
+===========ID 0x000320BF: Scorpius
+===========ID 0x00032342: Endeavor III
+===========ID 0x0003234B: Shackleton
+===========ID 0x00032474: Civil
+===========ID 0x0003260C: Particle Turret
+===========ID 0x0003260E: Particle Turret
+===========ID 0x00032617: Particle Turret
+===========ID 0x00032618: Particle Turret
+===========ID 0x00032619: Particle Turret
+===========ID 0x0003261A: Particle Turret
+===========ID 0x0003261B: Particle Turret
+===========ID 0x0003261C: Particle Turret
+===========ID 0x00032623: Particle Turret
+===========ID 0x000326F8: Prototype Ship
+===========ID 0x000326F9: Prototype Ship
+===========ID 0x000326FA: Prototype Ship
+===========ID 0x00032823: Marathon
+===========ID 0x00032824: Shieldbreaker
+===========ID 0x00032825: Silent Runner
+===========ID 0x00032826: Narwhal
+===========ID 0x00032827: War Horse
+===========ID 0x00032828: Warwolf
+===========ID 0x00032829: Vagabond
+===========ID 0x0003282A: Abyss Trekker
+===========ID 0x0003282B: Highlander
+===========ID 0x0003282C: Zumwalt II
+===========ID 0x0003282D: Roanoke
+===========ID 0x0003282E: Hoplite II
+===========ID 0x0003282F: Endeavor
+===========ID 0x00032C76: Hellhound
+===========ID 0x00032CA2: Watchdog
+===========ID 0x00032CA3: Watchdog
+===========ID 0x00032CA4: Watchdog
+===========ID 0x00032CA5: Watchdog
+===========ID 0x00032CA6: Watchdog
+===========ID 0x00032CA7: Watchdog
+===========ID 0x00032CA8: Watchdog
+===========ID 0x00032CA9: Watchdog
+===========ID 0x00032CAA: Watchdog
+===========ID 0x00032CAB: Watchdog
+===========ID 0x00032CAC: Watchdog
+===========ID 0x00032CAD: Watchdog
+===========ID 0x00032CAE: Watchdog
+===========ID 0x00033888: Star Eagle
+===========ID 0x00033AF7: Wanderwell
+===========ID 0x00033AF8: Star Eagle
+===========ID 0x00033B5F: Watchdog
+===========ID 0x00033B60: Watchdog
+===========ID 0x00033B61: Watchdog
+===========ID 0x00033B62: Watchdog
+===========ID 0x00033BB7: Sparrow
+===========ID 0x00033C56: Ranger
+===========ID 0x00033C57: BSN-728
+===========ID 0x00033EAB: Railstar
+===========ID 0x00033EAC: Falcon II
+===========ID 0x00033EAD: Railstar III
+===========ID 0x00033EAE: Sparrow III
+===========ID 0x00033EAF: Sparrow II
+===========ID 0x00033EB0: Sparrow
+===========ID 0x00033EB1: Wagontrain
+===========ID 0x00033EB2: Wagontrain II
+===========ID 0x00033EB3: Watchdog III
+===========ID 0x00033EB4: Railstar II
+===========ID 0x00033EB5: Hammerhead III
+===========ID 0x00033EB6: Watchdog IV
+===========ID 0x00033EB7: Achilles
+===========ID 0x00033EB8: Achilles II
+===========ID 0x00033EB9: Achilles III
+===========ID 0x00033EBA: Wagontrain III
+===========ID 0x00033EBB: Falcon
+===========ID 0x00033EBC: Falcon III
+===========ID 0x00033EBD: Falcon IV
+===========ID 0x00033EBE: Hammerhead
+===========ID 0x00033EBF: Hammerhead II
+===========ID 0x00033EC0: Naginata
+===========ID 0x00033EC1: Naginata II
+===========ID 0x00033EC2: Crossbow II
+===========ID 0x00033EC3: Naginata III
+===========ID 0x00033EC4: Crossbow
+===========ID 0x00033EC5: Watchdog II
+===========ID 0x00033EC6: Crossbow III

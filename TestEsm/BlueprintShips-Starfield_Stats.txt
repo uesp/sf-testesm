@@ -1,0 +1,1378 @@
+== ACHR Record Info ==
+TotalSize   = 8905
+TotalCount  = 81
+AverageSize = 109.94 bytes
+MinSize     = 50 bytes
+MaxSize     = 606 bytes
+MinVersion  = 555
+MaxVersion  = 555
+1) DATA Subrecord Info: One/Record Required FixedSize 
+	Total Count = 81
+	AverageSize = 24.00 bytes
+	MinSize     = 24 bytes
+	MaxSize     = 24 bytes
+	MinCount    = 1
+	MaxCount    = 1
+2) NAME Subrecord Info: One/Record Required FixedSize 
+	Total Count = 81
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+3) VMAD Subrecord Info: Optional VariableSized 
+	Total Count = 3
+	AverageSize = 47.67 bytes
+	MinSize     = 37 bytes
+	MaxSize     = 53 bytes
+	MinCount    = 0
+	MaxCount    = 1
+4) XESP Subrecord Info: Optional FixedSize 
+	Total Count = 36
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 0
+	MaxCount    = 1
+5) XLCM Subrecord Info: Optional FixedSize 
+	Total Count = 78
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+6) XLKR Subrecord Info: ManyAllowed Optional FixedSize 
+	Total Count = 67
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 0
+	MaxCount    = 3
+7) XLKT Subrecord Info: Optional FixedSize 
+	Total Count = 44
+	AverageSize = 0.00 bytes
+	MinSize     = 0 bytes
+	MaxSize     = 0 bytes
+	MinCount    = 0
+	MaxCount    = 1
+8) XLRT Subrecord Info: Optional VariableSized 
+	Total Count = 52
+	AverageSize = 6.31 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 12 bytes
+	MinCount    = 0
+	MaxCount    = 1
+9) XLYR Subrecord Info: Optional FixedSize 
+	Total Count = 68
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+10) XRGD Subrecord Info: Optional FixedSize 
+	Total Count = 3
+	AverageSize = 560.00 bytes
+	MinSize     = 560 bytes
+	MaxSize     = 560 bytes
+	MinCount    = 0
+	MaxCount    = 1
+
+
+== CELL Record Info ==
+TotalSize   = 390012
+TotalCount  = 777
+AverageSize = 501.95 bytes
+MinSize     = 123 bytes
+MaxSize     = 58594 bytes
+MinVersion  = 555
+MaxVersion  = 555
+1) DATA Subrecord Info: One/Record Required FixedSize 
+	Total Count = 777
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+2) EDID Subrecord Info: One/Record Required VariableSized 
+	Total Count = 777
+	AverageSize = 53.10 bytes
+	MinSize     = 31 bytes
+	MaxSize     = 124 bytes
+	MinCount    = 1
+	MaxCount    = 1
+3) LTMP Subrecord Info: One/Record Required FixedSize 
+	Total Count = 777
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+4) XBPS Subrecord Info: Optional VariableSized 
+	Total Count = 368
+	AverageSize = 1086.65 bytes
+	MinSize     = 48 bytes
+	MaxSize     = 10208 bytes
+	MinCount    = 0
+	MaxCount    = 1
+5) XCAS Subrecord Info: Optional FixedSize 
+	Total Count = 3
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+6) XCIM Subrecord Info: Optional FixedSize 
+	Total Count = 5
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+7) XCLL Subrecord Info: One/Record Required FixedSize 
+	Total Count = 777
+	AverageSize = 108.00 bytes
+	MinSize     = 108 bytes
+	MaxSize     = 108 bytes
+	MinCount    = 1
+	MaxCount    = 1
+8) XCLW Subrecord Info: One/Record Required FixedSize 
+	Total Count = 777
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+9) XCMO Subrecord Info: Optional FixedSize 
+	Total Count = 3
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+10) XILS Subrecord Info: One/Record Required FixedSize 
+	Total Count = 777
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+11) XLCN Subrecord Info: One/Record Required FixedSize 
+	Total Count = 777
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+12) XLKR Subrecord Info: Optional FixedSize 
+	Total Count = 65
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 0
+	MaxCount    = 1
+13) XLKT Subrecord Info: Optional FixedSize 
+	Total Count = 65
+	AverageSize = 0.00 bytes
+	MinSize     = 0 bytes
+	MaxSize     = 0 bytes
+	MinCount    = 0
+	MaxCount    = 1
+14) XTV2 Subrecord Info: Optional VariableSized 
+	Total Count = 3
+	AverageSize = 56466.67 bytes
+	MinSize     = 38584 bytes
+	MaxSize     = 92232 bytes
+	MinCount    = 0
+	MaxCount    = 1
+15) XXXX Subrecord Info: Optional FixedSize 
+	Total Count = 1
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+
+
+== GBFM Record Info ==
+TotalSize   = 22217656
+TotalCount  = 356
+AverageSize = 62409.14 bytes
+MinSize     = 2214 bytes
+MaxSize     = 286392 bytes
+MinVersion  = 555
+MaxVersion  = 555
+1) ANAM Subrecord Info: ManyAllowed VariableSized 
+	Total Count = 712
+	AverageSize = 22.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 40 bytes
+	MinCount    = 2
+	MaxCount    = 2
+2) APPR Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 28.00 bytes
+	MinSize     = 28 bytes
+	MaxSize     = 28 bytes
+	MinCount    = 1
+	MaxCount    = 1
+3) BFCB Subrecord Info: ManyAllowed VariableSized 
+	Total Count = 7499
+	AverageSize = 28.56 bytes
+	MinSize     = 19 bytes
+	MaxSize     = 41 bytes
+	MinCount    = 20
+	MaxCount    = 22
+4) BFCE Subrecord Info: ManyAllowed FixedSize 
+	Total Count = 7499
+	AverageSize = 0.00 bytes
+	MinSize     = 0 bytes
+	MaxSize     = 0 bytes
+	MinCount    = 20
+	MaxCount    = 22
+5) BLUF Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 1.00 bytes
+	MinSize     = 1 bytes
+	MaxSize     = 1 bytes
+	MinCount    = 1
+	MaxCount    = 1
+6) BNAM Subrecord Info: One/Record Required VariableSized 
+	Total Count = 356
+	AverageSize = 44.85 bytes
+	MinSize     = 42 bytes
+	MaxSize     = 45 bytes
+	MinCount    = 1
+	MaxCount    = 1
+7) BODC Subrecord Info: ManyAllowed Required FixedSize 
+	Total Count = 15615
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 249
+8) BODM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+9) BODS Subrecord Info: ManyAllowed Optional VariableSized 
+	Total Count = 33197
+	AverageSize = 10.65 bytes
+	MinSize     = 5 bytes
+	MaxSize     = 18 bytes
+	MinCount    = 0
+	MaxCount    = 388
+10) BODV Subrecord Info: ManyAllowed Optional FixedSize 
+	Total Count = 33197
+	AverageSize = 40.00 bytes
+	MinSize     = 40 bytes
+	MaxSize     = 40 bytes
+	MinCount    = 0
+	MaxCount    = 388
+11) BOID Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+12) BUO4 Subrecord Info: One/Record Required VariableSized 
+	Total Count = 356
+	AverageSize = 1579.04 bytes
+	MinSize     = 36 bytes
+	MaxSize     = 8964 bytes
+	MinCount    = 1
+	MaxCount    = 1
+13) CNAM Subrecord Info: One/Record Required VariableSized 
+	Total Count = 356
+	AverageSize = 26.85 bytes
+	MinSize     = 24 bytes
+	MaxSize     = 27 bytes
+	MinCount    = 1
+	MaxCount    = 1
+14) CNTO Subrecord Info: ManyAllowed Optional FixedSize 
+	Total Count = 59
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 0
+	MaxCount    = 12
+15) COCT Subrecord Info: Optional FixedSize 
+	Total Count = 34
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+16) DEST Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 1
+	MaxCount    = 1
+17) DMDL Subrecord Info: Optional FixedSize 
+	Total Count = 9
+	AverageSize = 24.00 bytes
+	MinSize     = 24 bytes
+	MaxSize     = 24 bytes
+	MinCount    = 0
+	MaxCount    = 1
+18) DNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 22.00 bytes
+	MinSize     = 22 bytes
+	MaxSize     = 22 bytes
+	MinCount    = 1
+	MaxCount    = 1
+19) DSTD Subrecord Info: ManyAllowed Required FixedSize 
+	Total Count = 362
+	AverageSize = 24.00 bytes
+	MinSize     = 24 bytes
+	MaxSize     = 24 bytes
+	MinCount    = 1
+	MaxCount    = 2
+20) DSTF Subrecord Info: ManyAllowed Required FixedSize 
+	Total Count = 362
+	AverageSize = 0.00 bytes
+	MinSize     = 0 bytes
+	MaxSize     = 0 bytes
+	MinCount    = 1
+	MaxCount    = 2
+21) EDID Subrecord Info: One/Record Required VariableSized 
+	Total Count = 356
+	AverageSize = 36.79 bytes
+	MinSize     = 14 bytes
+	MaxSize     = 57 bytes
+	MinCount    = 1
+	MaxCount    = 1
+22) ESSF Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+23) EXAC Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+24) EXAS Subrecord Info: ManyAllowed Optional VariableSized 
+	Total Count = 640
+	AverageSize = 23.98 bytes
+	MinSize     = 23 bytes
+	MaxSize     = 25 bytes
+	MinCount    = 0
+	MaxCount    = 2
+25) EXBS Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 1.00 bytes
+	MinSize     = 1 bytes
+	MaxSize     = 1 bytes
+	MinCount    = 1
+	MaxCount    = 1
+26) EXCI Subrecord Info: ManyAllowed Optional FixedSize 
+	Total Count = 1502
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 13
+27) EXCN Subrecord Info: ManyAllowed Optional VariableSized 
+	Total Count = 1502
+	AverageSize = 29.13 bytes
+	MinSize     = 7 bytes
+	MaxSize     = 37 bytes
+	MinCount    = 0
+	MaxCount    = 13
+28) EXDC Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+29) EXDZ Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+30) FCTF Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+31) FLFM Subrecord Info: ManyAllowed FixedSize 
+	Total Count = 712
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 2
+	MaxCount    = 2
+32) FLKW Subrecord Info: ManyAllowed FixedSize 
+	Total Count = 712
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 2
+	MaxCount    = 2
+33) FLLD Subrecord Info: ManyAllowed Required FixedSize 
+	Total Count = 365
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 2
+34) FLTR Subrecord Info: Optional VariableSized 
+	Total Count = 265
+	AverageSize = 16.76 bytes
+	MinSize     = 13 bytes
+	MaxSize     = 17 bytes
+	MinCount    = 0
+	MaxCount    = 1
+35) FULL Subrecord Info: Optional FixedSize 
+	Total Count = 353
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+36) HULL Subrecord Info: Optional FixedSize 
+	Total Count = 12
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+37) INAM Subrecord Info: Optional FixedSize 
+	Total Count = 326
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+38) INTV Subrecord Info: Optional FixedSize 
+	Total Count = 1
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+39) ITMC Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+40) KSIZ Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+41) KWDA Subrecord Info: One/Record Required VariableSized 
+	Total Count = 356
+	AverageSize = 9.03 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 36 bytes
+	MinCount    = 1
+	MaxCount    = 1
+42) MODL Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 38.00 bytes
+	MinSize     = 38 bytes
+	MaxSize     = 38 bytes
+	MinCount    = 1
+	MaxCount    = 1
+43) NVNM Subrecord Info: Optional VariableSized 
+	Total Count = 341
+	AverageSize = 47958.26 bytes
+	MinSize     = 6631 bytes
+	MaxSize     = 242156 bytes
+	MinCount    = 0
+	MaxCount    = 1
+44) OBND Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 24.00 bytes
+	MinSize     = 24 bytes
+	MaxSize     = 24 bytes
+	MinCount    = 1
+	MaxCount    = 1
+45) OBTE Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+46) OBTF Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 0.00 bytes
+	MinSize     = 0 bytes
+	MaxSize     = 0 bytes
+	MinCount    = 1
+	MaxCount    = 1
+47) OBTS Subrecord Info: One/Record Required VariableSized 
+	Total Count = 356
+	AverageSize = 31.72 bytes
+	MinSize     = 18 bytes
+	MaxSize     = 32 bytes
+	MinCount    = 1
+	MaxCount    = 1
+48) ODTY Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+49) OPDS Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 80.00 bytes
+	MinSize     = 80 bytes
+	MaxSize     = 80 bytes
+	MinCount    = 1
+	MaxCount    = 1
+50) PRPS Subrecord Info: Optional VariableSized 
+	Total Count = 40
+	AverageSize = 14.40 bytes
+	MinSize     = 12 bytes
+	MaxSize     = 48 bytes
+	MinCount    = 0
+	MaxCount    = 1
+51) SAIA Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+52) SHWB Subrecord Info: One/Record Required FixedSize 
+	Total Count = 356
+	AverageSize = 12.00 bytes
+	MinSize     = 12 bytes
+	MaxSize     = 12 bytes
+	MinCount    = 1
+	MaxCount    = 1
+53) SODA Subrecord Info: Optional FixedSize 
+	Total Count = 1
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+54) STCP Subrecord Info: Optional FixedSize 
+	Total Count = 38
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+55) STOP Subrecord Info: ManyAllowed FixedSize 
+	Total Count = 712
+	AverageSize = 0.00 bytes
+	MinSize     = 0 bytes
+	MaxSize     = 0 bytes
+	MinCount    = 2
+	MaxCount    = 2
+56) STRD Subrecord Info: One/Record Required VariableSized 
+	Total Count = 356
+	AverageSize = 6657.56 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 141812 bytes
+	MinCount    = 1
+	MaxCount    = 1
+57) STRV Subrecord Info: ManyAllowed VariableSized 
+	Total Count = 712
+	AverageSize = 24.50 bytes
+	MinSize     = 23 bytes
+	MaxSize     = 26 bytes
+	MinCount    = 2
+	MaxCount    = 2
+58) VMAD Subrecord Info: Optional VariableSized 
+	Total Count = 3
+	AverageSize = 276.67 bytes
+	MinSize     = 172 bytes
+	MaxSize     = 329 bytes
+	MinCount    = 0
+	MaxCount    = 1
+59) XXXX Subrecord Info: ManyAllowed Optional FixedSize 
+	Total Count = 92
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 2
+
+
+== LCTN Record Info ==
+TotalSize   = 1074507
+TotalCount  = 777
+AverageSize = 1382.89 bytes
+MinSize     = 119 bytes
+MaxSize     = 7496 bytes
+MinVersion  = 555
+MaxVersion  = 555
+1) ANAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 777
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+2) DATA Subrecord Info: One/Record Required FixedSize 
+	Total Count = 777
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 1
+	MaxCount    = 1
+3) EDID Subrecord Info: One/Record Required VariableSized 
+	Total Count = 777
+	AverageSize = 63.78 bytes
+	MinSize     = 39 bytes
+	MaxSize     = 104 bytes
+	MinCount    = 1
+	MaxCount    = 1
+4) FULL Subrecord Info: Optional FixedSize 
+	Total Count = 771
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+5) KSIZ Subrecord Info: Optional FixedSize 
+	Total Count = 771
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+6) KWDA Subrecord Info: Optional VariableSized 
+	Total Count = 771
+	AverageSize = 8.01 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 16 bytes
+	MinCount    = 0
+	MaxCount    = 1
+7) LCEP Subrecord Info: Optional VariableSized 
+	Total Count = 64
+	AverageSize = 26.63 bytes
+	MinSize     = 12 bytes
+	MaxSize     = 348 bytes
+	MinCount    = 0
+	MaxCount    = 1
+8) LCID Subrecord Info: Optional VariableSized 
+	Total Count = 730
+	AverageSize = 18.46 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 100 bytes
+	MinCount    = 0
+	MaxCount    = 1
+9) LCSR Subrecord Info: Optional VariableSized 
+	Total Count = 736
+	AverageSize = 1271.09 bytes
+	MinSize     = 20 bytes
+	MaxSize     = 7260 bytes
+	MinCount    = 0
+	MaxCount    = 1
+10) RNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 777
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+11) TNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 777
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+
+
+== NAVI Record Info ==
+TotalSize   = 92984
+TotalCount  = 1
+AverageSize = 92984.00 bytes
+MinSize     = 92984 bytes
+MaxSize     = 92984 bytes
+MinVersion  = 555
+MaxVersion  = 555
+1) NVER Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+2) NVMI Subrecord Info: ManyAllowed VariableSized 
+	Total Count = 504
+	AverageSize = 178.44 bytes
+	MinSize     = 58 bytes
+	MaxSize     = 4138 bytes
+	MinCount    = 504
+	MaxCount    = 504
+3) NVPP Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 1
+	MaxCount    = 1
+
+
+== NAVM Record Info ==
+TotalSize   = 9653738
+TotalCount  = 438
+AverageSize = 22040.50 bytes
+MinSize     = 139 bytes
+MaxSize     = 116022 bytes
+MinVersion  = 555
+MaxVersion  = 555
+1) MNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 438
+	AverageSize = 0.00 bytes
+	MinSize     = 0 bytes
+	MaxSize     = 0 bytes
+	MinCount    = 1
+	MaxCount    = 1
+2) NVNM Subrecord Info: One/Record Required VariableSized 
+	Total Count = 438
+	AverageSize = 40944.51 bytes
+	MinSize     = 214 bytes
+	MaxSize     = 242166 bytes
+	MinCount    = 1
+	MaxCount    = 1
+3) XXXX Subrecord Info: Optional FixedSize 
+	Total Count = 95
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+
+
+== PERS Record Info ==
+TotalSize   = 17644878
+TotalCount  = 1
+AverageSize = 17644878.00 bytes
+MinSize     = 17644878 bytes
+MaxSize     = 17644878 bytes
+MinVersion  = 555
+MaxVersion  = 555
+1) DAT2 Subrecord Info: ManyAllowed VariableSized 
+	Total Count = 17
+	AverageSize = 1037917.44 bytes
+	MinSize     = 867444 bytes
+	MaxSize     = 1048572 bytes
+	MinCount    = 17
+	MaxCount    = 17
+2) DATA Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+3) XXXX Subrecord Info: ManyAllowed FixedSize 
+	Total Count = 17
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 17
+	MaxCount    = 17
+
+
+== REFR Record Info ==
+TotalSize   = 213159771
+TotalCount  = 1468310
+AverageSize = 145.17 bytes
+MinSize     = 10 bytes
+MaxSize     = 9639 bytes
+MinVersion  = 555
+MaxVersion  = 555
+1) BFCB Subrecord Info: ManyAllowed Optional VariableSized 
+	Total Count = 94234
+	AverageSize = 31.06 bytes
+	MinSize     = 18 bytes
+	MaxSize     = 36 bytes
+	MinCount    = 0
+	MaxCount    = 2
+2) BFCE Subrecord Info: ManyAllowed Optional FixedSize 
+	Total Count = 94234
+	AverageSize = 0.00 bytes
+	MinSize     = 0 bytes
+	MaxSize     = 0 bytes
+	MinCount    = 0
+	MaxCount    = 2
+3) DATA Subrecord Info: Optional FixedSize 
+	Total Count = 1468234
+	AverageSize = 24.00 bytes
+	MinSize     = 24 bytes
+	MaxSize     = 24 bytes
+	MinCount    = 0
+	MaxCount    = 1
+4) EDID Subrecord Info: Optional VariableSized 
+	Total Count = 3803
+	AverageSize = 43.42 bytes
+	MinSize     = 15 bytes
+	MaxSize     = 222 bytes
+	MinCount    = 0
+	MaxCount    = 1
+5) FLCS Subrecord Info: Optional FixedSize 
+	Total Count = 56031
+	AverageSize = 20.00 bytes
+	MinSize     = 20 bytes
+	MaxSize     = 20 bytes
+	MinCount    = 0
+	MaxCount    = 1
+6) GNAM Subrecord Info: Optional FixedSize 
+	Total Count = 1430782
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+7) HNAM Subrecord Info: Optional FixedSize 
+	Total Count = 1405866
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+8) INAM Subrecord Info: Optional VariableSized 
+	Total Count = 1430830
+	AverageSize = 2.00 bytes
+	MinSize     = 2 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+9) JNAM Subrecord Info: Optional FixedSize 
+	Total Count = 1430796
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+10) KSIZ Subrecord Info: Optional FixedSize 
+	Total Count = 31661
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+11) KWDA Subrecord Info: Optional VariableSized 
+	Total Count = 31661
+	AverageSize = 4.22 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 0
+	MaxCount    = 1
+12) LNAM Subrecord Info: Optional FixedSize 
+	Total Count = 1430796
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+13) NAME Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1468310
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+14) ONAM Subrecord Info: Optional FixedSize 
+	Total Count = 593
+	AverageSize = 0.00 bytes
+	MinSize     = 0 bytes
+	MaxSize     = 0 bytes
+	MinCount    = 0
+	MaxCount    = 1
+15) OPDS Subrecord Info: Optional FixedSize 
+	Total Count = 10
+	AverageSize = 80.00 bytes
+	MinSize     = 80 bytes
+	MaxSize     = 80 bytes
+	MinCount    = 0
+	MaxCount    = 1
+16) PDTO Subrecord Info: Optional FixedSize 
+	Total Count = 34
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 0
+	MaxCount    = 1
+17) VLMS Subrecord Info: Optional VariableSized 
+	Total Count = 6529
+	AverageSize = 310.64 bytes
+	MinSize     = 96 bytes
+	MaxSize     = 9380 bytes
+	MinCount    = 0
+	MaxCount    = 1
+18) VMAD Subrecord Info: Optional VariableSized 
+	Total Count = 455
+	AverageSize = 62.02 bytes
+	MinSize     = 35 bytes
+	MaxSize     = 132 bytes
+	MinCount    = 0
+	MaxCount    = 1
+19) XACT Subrecord Info: Optional FixedSize 
+	Total Count = 593
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+20) XALD Subrecord Info: Optional FixedSize 
+	Total Count = 64112
+	AverageSize = 16.00 bytes
+	MinSize     = 16 bytes
+	MaxSize     = 16 bytes
+	MinCount    = 0
+	MaxCount    = 1
+21) XALG Subrecord Info: Optional FixedSize 
+	Total Count = 5944
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 0
+	MaxCount    = 1
+22) XATP Subrecord Info: Optional FixedSize 
+	Total Count = 334
+	AverageSize = 0.00 bytes
+	MinSize     = 0 bytes
+	MaxSize     = 0 bytes
+	MinCount    = 0
+	MaxCount    = 1
+23) XATR Subrecord Info: Optional FixedSize 
+	Total Count = 1244
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+24) XBPO Subrecord Info: Optional FixedSize 
+	Total Count = 1440866
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+25) XBSD Subrecord Info: Optional FixedSize 
+	Total Count = 58
+	AverageSize = 24.00 bytes
+	MinSize     = 24 bytes
+	MaxSize     = 24 bytes
+	MinCount    = 0
+	MaxCount    = 1
+26) XCDD Subrecord Info: Optional FixedSize 
+	Total Count = 358654
+	AverageSize = 12.00 bytes
+	MinSize     = 12 bytes
+	MaxSize     = 12 bytes
+	MinCount    = 0
+	MaxCount    = 1
+27) XCNT Subrecord Info: Optional FixedSize 
+	Total Count = 6
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+28) XCOL Subrecord Info: Optional FixedSize 
+	Total Count = 1085
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 0
+	MaxCount    = 1
+29) XDTF Subrecord Info: Optional FixedSize 
+	Total Count = 14
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 0
+	MaxCount    = 1
+30) XDTS Subrecord Info: Optional VariableSized 
+	Total Count = 14
+	AverageSize = 17.57 bytes
+	MinSize     = 9 bytes
+	MaxSize     = 27 bytes
+	MinCount    = 0
+	MaxCount    = 1
+31) XEED Subrecord Info: Optional FixedSize 
+	Total Count = 18372
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 0
+	MaxCount    = 1
+32) XESP Subrecord Info: Optional FixedSize 
+	Total Count = 2731
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 0
+	MaxCount    = 1
+33) XGDS Subrecord Info: Optional FixedSize 
+	Total Count = 3261
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+34) XLBD Subrecord Info: Optional FixedSize 
+	Total Count = 39879
+	AverageSize = 24.00 bytes
+	MinSize     = 24 bytes
+	MaxSize     = 24 bytes
+	MinCount    = 0
+	MaxCount    = 1
+35) XLCD Subrecord Info: Optional FixedSize 
+	Total Count = 44732
+	AverageSize = 12.00 bytes
+	MinSize     = 12 bytes
+	MaxSize     = 12 bytes
+	MinCount    = 0
+	MaxCount    = 1
+36) XLCM Subrecord Info: Optional FixedSize 
+	Total Count = 154
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+37) XLIG Subrecord Info: Optional FixedSize 
+	Total Count = 84054
+	AverageSize = 32.00 bytes
+	MinSize     = 32 bytes
+	MaxSize     = 32 bytes
+	MinCount    = 0
+	MaxCount    = 1
+38) XLKR Subrecord Info: ManyAllowed Optional FixedSize 
+	Total Count = 405129
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 0
+	MaxCount    = 4
+39) XLKT Subrecord Info: Optional FixedSize 
+	Total Count = 233865
+	AverageSize = 0.00 bytes
+	MinSize     = 0 bytes
+	MaxSize     = 0 bytes
+	MinCount    = 0
+	MaxCount    = 1
+40) XLMS Subrecord Info: Optional VariableSized 
+	Total Count = 259348
+	AverageSize = 4.88 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 28 bytes
+	MinCount    = 0
+	MaxCount    = 1
+41) XLOC Subrecord Info: Optional FixedSize 
+	Total Count = 391
+	AverageSize = 16.00 bytes
+	MinSize     = 16 bytes
+	MaxSize     = 16 bytes
+	MinCount    = 0
+	MaxCount    = 1
+42) XLRD Subrecord Info: Optional FixedSize 
+	Total Count = 51241
+	AverageSize = 20.00 bytes
+	MinSize     = 20 bytes
+	MaxSize     = 20 bytes
+	MinCount    = 0
+	MaxCount    = 1
+43) XLRT Subrecord Info: Optional VariableSized 
+	Total Count = 12458
+	AverageSize = 4.64 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 16 bytes
+	MinCount    = 0
+	MaxCount    = 1
+44) XLSM Subrecord Info: Optional FixedSize 
+	Total Count = 53691
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+45) XLVD Subrecord Info: Optional FixedSize 
+	Total Count = 22345
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+46) XLYR Subrecord Info: Optional FixedSize 
+	Total Count = 69465
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+47) XNDP Subrecord Info: Optional FixedSize 
+	Total Count = 373
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 0
+	MaxCount    = 1
+48) XNSE Subrecord Info: Optional VariableSized 
+	Total Count = 40
+	AverageSize = 336.00 bytes
+	MinSize     = 325 bytes
+	MaxSize     = 349 bytes
+	MinCount    = 0
+	MaxCount    = 1
+49) XOWN Subrecord Info: Optional FixedSize 
+	Total Count = 76
+	AverageSize = 12.00 bytes
+	MinSize     = 12 bytes
+	MaxSize     = 12 bytes
+	MinCount    = 0
+	MaxCount    = 1
+50) XPCK Subrecord Info: Optional FixedSize 
+	Total Count = 119612
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+51) XPCS Subrecord Info: Optional FixedSize 
+	Total Count = 1335
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+52) XPDD Subrecord Info: Optional FixedSize 
+	Total Count = 329346
+	AverageSize = 16.00 bytes
+	MinSize     = 16 bytes
+	MaxSize     = 16 bytes
+	MinCount    = 0
+	MaxCount    = 1
+53) XPDO Subrecord Info: Optional VariableSized 
+	Total Count = 176326
+	AverageSize = 15.10 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 124 bytes
+	MinCount    = 0
+	MaxCount    = 1
+54) XPPA Subrecord Info: Optional FixedSize 
+	Total Count = 34
+	AverageSize = 0.00 bytes
+	MinSize     = 0 bytes
+	MaxSize     = 0 bytes
+	MinCount    = 0
+	MaxCount    = 1
+55) XPPS Subrecord Info: Optional FixedSize 
+	Total Count = 479
+	AverageSize = 12.00 bytes
+	MinSize     = 12 bytes
+	MaxSize     = 12 bytes
+	MinCount    = 0
+	MaxCount    = 1
+56) XPRD Subrecord Info: Optional FixedSize 
+	Total Count = 34
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+57) XPRM Subrecord Info: Optional FixedSize 
+	Total Count = 9002
+	AverageSize = 32.00 bytes
+	MinSize     = 32 bytes
+	MaxSize     = 32 bytes
+	MinCount    = 0
+	MaxCount    = 1
+58) XRDS Subrecord Info: Optional FixedSize 
+	Total Count = 74591
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+59) XRFG Subrecord Info: Optional FixedSize 
+	Total Count = 83966
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+60) XRGD Subrecord Info: Optional VariableSized 
+	Total Count = 4807
+	AverageSize = 43.69 bytes
+	MinSize     = 28 bytes
+	MaxSize     = 588 bytes
+	MinCount    = 0
+	MaxCount    = 1
+61) XRNK Subrecord Info: Optional FixedSize 
+	Total Count = 14306
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+62) XSCL Subrecord Info: Optional FixedSize 
+	Total Count = 328492
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+63) XSL1 Subrecord Info: Optional VariableSized 
+	Total Count = 31049
+	AverageSize = 28.30 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 180 bytes
+	MinCount    = 0
+	MaxCount    = 1
+64) XTEL Subrecord Info: Optional FixedSize 
+	Total Count = 730
+	AverageSize = 36.00 bytes
+	MinSize     = 36 bytes
+	MaxSize     = 36 bytes
+	MinCount    = 0
+	MaxCount    = 1
+65) XTV2 Subrecord Info: Optional VariableSized 
+	Total Count = 96
+	AverageSize = 60.67 bytes
+	MinSize     = 56 bytes
+	MaxSize     = 112 bytes
+	MinCount    = 0
+	MaxCount    = 1
+66) XVL2 Subrecord Info: Optional FixedSize 
+	Total Count = 6529
+	AverageSize = 85.00 bytes
+	MinSize     = 85 bytes
+	MaxSize     = 85 bytes
+	MinCount    = 0
+	MaxCount    = 1
+67) XVOI Subrecord Info: Optional FixedSize 
+	Total Count = 6502
+	AverageSize = 16.00 bytes
+	MinSize     = 16 bytes
+	MaxSize     = 16 bytes
+	MinCount    = 0
+	MaxCount    = 1
+68) XWPK Subrecord Info: ManyAllowed Optional FixedSize 
+	Total Count = 2861592
+	AverageSize = 0.00 bytes
+	MinSize     = 0 bytes
+	MaxSize     = 0 bytes
+	MinCount    = 0
+	MaxCount    = 2
+
+
+== RFGP Record Info ==
+TotalSize   = 1294445
+TotalCount  = 22685
+AverageSize = 57.06 bytes
+MinSize     = 28 bytes
+MaxSize     = 110 bytes
+MinVersion  = 555
+MaxVersion  = 555
+1) LNAM Subrecord Info: Optional FixedSize 
+	Total Count = 21870
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+2) MNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 22685
+	AverageSize = 12.00 bytes
+	MinSize     = 12 bytes
+	MaxSize     = 12 bytes
+	MinCount    = 1
+	MaxCount    = 1
+3) NNAM Subrecord Info: One/Record Required VariableSized 
+	Total Count = 22685
+	AverageSize = 12.83 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 56 bytes
+	MinCount    = 1
+	MaxCount    = 1
+4) PNAM Subrecord Info: Optional FixedSize 
+	Total Count = 2148
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+5) RNAM Subrecord Info: Optional FixedSize 
+	Total Count = 21870
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 0
+	MaxCount    = 1
+
+
+== TES4 Record Info ==
+TotalSize   = 62
+TotalCount  = 1
+AverageSize = 62.00 bytes
+MinSize     = 62 bytes
+MaxSize     = 62 bytes
+MinVersion  = 555
+MaxVersion  = 555
+1) CNAM Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 8.00 bytes
+	MinSize     = 8 bytes
+	MaxSize     = 8 bytes
+	MinCount    = 1
+	MaxCount    = 1
+2) HEDR Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 12.00 bytes
+	MinSize     = 12 bytes
+	MaxSize     = 12 bytes
+	MinCount    = 1
+	MaxCount    = 1
+3) INCC Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 4.00 bytes
+	MinSize     = 4 bytes
+	MaxSize     = 4 bytes
+	MinCount    = 1
+	MaxCount    = 1
+4) MAST Subrecord Info: One/Record Required FixedSize 
+	Total Count = 1
+	AverageSize = 14.00 bytes
+	MinSize     = 14 bytes
+	MaxSize     = 14 bytes
+	MinCount    = 1
+	MaxCount    = 1
+
+
+== Top Level Records/Groups ==
+
+	TES4
+	GRUP
+	GRUP
+	GRUP
+	GRUP
+	GRUP
+	GRUP
+
+

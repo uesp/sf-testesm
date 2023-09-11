@@ -1,0 +1,6 @@
+Team,
+
+It has come to our attention that some of you may have programmed our robotic assets to perform inappropriate tasks. This is a clear violation of company policy. In no way should our robotics be used for fetching, brewing, or distributing coffee and should never be treated as personal servants. They may be robots, but they are still to be considered your teammates. Any lost time has been calculated and will be evenly deducted from everyone's pay.
+
+Thanks,
+HR

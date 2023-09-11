@@ -1,0 +1,11 @@
+Specimen A
+Type: Flower
+Toxicity: ~7000 mg/kg
+
+Specimen B
+Type: Leaf
+Toxicity: ~900 mg/kg
+
+Specimen C
+Type: Root
+Toxicity: ~16000 mg/kg

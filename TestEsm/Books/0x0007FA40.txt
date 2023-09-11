@@ -1,0 +1,21 @@
+Brainstorming new uses for Noam:
+
+Message service
+     -Leave messages for other miners, who can listen to them at their 
+      convenience.
+     -DONE
+
+Weather
+     -Nah, It's always dry and dusty on Mars, and no one goes outside, 
+      so who cares? Anyway, I'm sure not going out there to check it.
+
+Radio
+     -Shot down by management. No one can agree on what to listen to, 
+      anyway.
+
+Daily fun facts
+     -Cool in theory. but seems like a hassle to keep up to date. Maybe 
+      someone else would want to do this?
+
+Hygiene reminders
+     -Some of the other miners NEED it. 

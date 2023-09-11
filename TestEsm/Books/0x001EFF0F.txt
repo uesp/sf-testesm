@@ -1,0 +1,9 @@
+*List of atmospheric data*
+
+...
+
+Oxygen: 20%
+
+Nitrogen: 70%
+
+Conclusion: We've found a pocket atmosphere similar to the composition of Earth's.

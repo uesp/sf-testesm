@@ -1,0 +1,3 @@
+Hyperspectral survey of <Alias=TargetPlanet> indicated a high probability of a significant deposit of <Alias=Treasure> near the surface.
+
+Recommend follow-up by a field survey team.

@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Library">
+      <UniqueIdentifier>{f179b3dd-d25d-4e46-a529-051565566d51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BsaFile">
+      <UniqueIdentifier>{2a0a6002-d98b-4901-834b-f04cf81e1753}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ModFile">
+      <UniqueIdentifier>{940eab2d-83d4-4bb9-a553-24d81fee89ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ModFile\Groups">
+      <UniqueIdentifier>{db21c351-6f8a-4efe-a760-211128641e67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ModFile\Records">
+      <UniqueIdentifier>{8c004452-5836-4ac9-a7c5-551f008375f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ModFile\SubRecords">
+      <UniqueIdentifier>{92256cd5-ccb8-4684-aa84-d9aabedc785a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Library">
+      <UniqueIdentifier>{98b30dc0-2cf3-4275-b09a-f6a973612d68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ModFile">
+      <UniqueIdentifier>{d69bfca9-8554-454a-9612-091c643413ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ModFile\Records">
+      <UniqueIdentifier>{42c4b239-5076-47ab-8277-0d5e79249576}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ModFile\Subrecords">
+      <UniqueIdentifier>{25bee28c-4ff0-4cad-9792-ef66d8d02b59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ModFile\Groups">
+      <UniqueIdentifier>{cd335265-0777-496c-bf26-139f1f8e7fc8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TestEsm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\common\file.cpp">
+      <Filter>Source Files\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\common\error.cpp">
+      <Filter>Source Files\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\common\errorhandler.cpp">
+      <Filter>Source Files\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\common\logfile.cpp">
+      <Filter>Source Files\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\common\string.cpp">
+      <Filter>Source Files\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\baserecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\moddefs.cpp">
+      <Filter>Source Files\ModFile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\rectype.cpp">
+      <Filter>Source Files\ModFile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\espfile.cpp">
+      <Filter>Source Files\ModFile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\record.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\subrecords\subrecord.cpp">
+      <Filter>Source Files\ModFile\SubRecords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\common\memfile.cpp">
+      <Filter>Header Files\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\groups\group.cpp">
+      <Filter>Source Files\ModFile\Groups</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\recordcreate.cpp">
+      <Filter>Source Files\ModFile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\groups\typegroup.cpp">
+      <Filter>Source Files\ModFile\Groups</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\tes4record.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\subrecords\datasubrecord.cpp">
+      <Filter>Source Files\ModFile\SubRecords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\stringfile\StringFile.cpp">
+      <Filter>Source Files\ModFile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\common\utils.cpp">
+      <Filter>Source Files\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\BookRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\item1record.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\idrecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\idkeyrecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\subrecords\stringsubrecord.cpp">
+      <Filter>Source Files\ModFile\SubRecords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\subrecords\lstringsubrecord.cpp">
+      <Filter>Source Files\ModFile\SubRecords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\weaprecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\item2record.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\EqupRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\common\time.cpp">
+      <Filter>Source Files\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\AmmoRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\ArmoRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\FurnRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\MiscRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\NpcRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\RaceRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\FactRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\ClasRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\MgefRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\GmstRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\BiomRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\SpelRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\EnchRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\AlchRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\AvifRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\WrldRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\LctnRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\StdtRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\subrecords\Data2StdtSubrecord.cpp">
+      <Filter>Source Files\ModFile\SubRecords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\SunpRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\PndtRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\QustRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\subrecords\DnamPndtSubrecord.cpp">
+      <Filter>Source Files\ModFile\SubRecords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\subrecords\HnamPndtSubrecord.cpp">
+      <Filter>Source Files\ModFile\SubRecords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\FlorRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\PerkRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\LscrRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\CellRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\GbfmRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\FlstRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\subrecords\gmstdatasubrecord.cpp">
+      <Filter>Source Files\ModFile\SubRecords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\DialRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\InfoRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\subrecords\VmadSubrecord.cpp">
+      <Filter>Source Files\ModFile\SubRecords</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Library\common\file.h">
+      <Filter>Header Files\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\common\platform.h">
+      <Filter>Header Files\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\common\types.h">
+      <Filter>Header Files\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\common\error.h">
+      <Filter>Header Files\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\common\errorhandler.h">
+      <Filter>Header Files\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\common\logfile.h">
+      <Filter>Header Files\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\common\string.h">
+      <Filter>Header Files\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\baserecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\moddefs.h">
+      <Filter>Header Files\ModFile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\rectype.h">
+      <Filter>Header Files\ModFile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\espfile.h">
+      <Filter>Header Files\ModFile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\record.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\subrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\common\memfile.h">
+      <Filter>Source Files\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\groups\group.h">
+      <Filter>Header Files\ModFile\Groups</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\groups\typegroup.h">
+      <Filter>Header Files\ModFile\Groups</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\tes4record.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\datasubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\stringfile\StringFile.h">
+      <Filter>Header Files\ModFile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\common\utils.h">
+      <Filter>Header Files\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\BookRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\item1record.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\idrecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\idkeyrecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\boundssubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\stringsubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\lstringsubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\weaprecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\item2record.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\formidsubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\EqupRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\wgensubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\common\time.h">
+      <Filter>Header Files\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\Wam2Subrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\AmmoRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\AmmoDataSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\ArmoRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\ArmoDataSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\BookDataSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\FurnRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\MiscDataSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\MiscRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\NpcRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\AcbsNpcSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\RaceRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\SnamNpcSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\FactRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\ClasRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\MgefRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\MgefDataSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\GmstRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\floatsubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\dwordsubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\BiomRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\SpelRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\SpitSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\EnchRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\EnitSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\EnitAlchSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\AlchRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\AvifRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\WrldRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\bytesubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\LctnRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\LctnDataSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\StdtRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\BnamStdtSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\Data3StdtSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\Data2StdtSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\Data1StdtSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\SunpRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\PndtRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\QustRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\FnamPndtSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\DnamPndtSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\EnamPndtSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\GnamPndtSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\HnamPndtSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\FlorRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\PerkRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\LscrRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\CellRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\GbfmRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\FlstRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\gmstdatasubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\DialRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\wordsubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\InfoRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\VmadSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\Library\common\zlib\zlibstat.lib">
+      <Filter>Source Files\Library</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
