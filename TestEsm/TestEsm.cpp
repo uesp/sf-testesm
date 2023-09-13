@@ -83,6 +83,7 @@ skills/powers
 */
 
 std::unordered_map<dword, string> StarNameMap;
+std::unordered_map<dword, std::unordered_map<dword, string>> PlanetIndexMap;
 
 
 string EscapeCsv(string& Orig)
@@ -1259,8 +1260,24 @@ void DumpPlanets(CEspFile& espFile, const string Filename)
 
 	if (!File.Open(Filename, "wt")) return;
 
-	File.Printf("FormID,EditorID,Name,ANAM,Density,Temperature,Model,Fnam, Fnam1, Mass, Radius, Gravity, Fnam5, Dnam1, Dnam2, Enam1, Enam2, Aphelion, Eccentricity, Enam6, MeanOrbit, Enam7, Enam8, Enam9, Enam10, Enam11, Enam12, Gravity, StarId, StarName, Primary, PlanetId, ");
-	File.Printf("Hnam1,Class,Gliese,Life,MagField,Mass,Type,System,Special, Perihelion, StarDistance, Density, Heat, HydroPct, Hnam6, Hnam7, PeriAngle, Hnam8, StartAngle, Year, Asteroids, Hnam10, Seed, Hnam11\n");
+	File.Printf("FormID,EditorID,Name,ANAM,Density,Temperature,Model,Fnam, Fnam1, Mass, Radius, Gravity, Fnam5, Dnam1, Dnam2, Enam1, Enam2, Aphelion, Eccentricity, Enam6, MeanOrbit, Enam7, Enam8, Enam9, Enam10, Enam11, Enam12, Gravity1, StarId, StarName, Primary, PlanetId, Orbits, ");
+	File.Printf("Hnam1,Class,Gliese,Life,MagField,Mass1,Type,System,Special, Perihelion, StarDistance, Density1, Heat, HydroPct, Hnam6, Hnam7, PeriAngle, Hnam8, StartAngle, Year, Asteroids, Hnam10, Seed, Hnam11\n");
+
+	for (auto i : pRecords->GetRecords())
+	{
+		auto pRecord = dynamic_cast<CPndtRecord *>(i);
+		if (pRecord == nullptr) continue;
+
+		auto pFull = pRecord->FindSubrecord<CLStringSubrecord>(NAME_FULL);
+		auto pGnam2 = pRecord->FindSubrecord<CGnamPndtSubrecord>(NAME_GNAM);
+
+		if (pFull && pGnam2)
+		{
+			auto data = pGnam2->GetGnamData();
+			//File.Printf(",\"%d\",\"%s\",\"%d\",\"%d\"", data.StarId, StarName.c_str(), data.Primary, data.PlanetId);
+			PlanetIndexMap[data.StarId][data.PlanetId] = pFull->GetString();
+		}
+	}
 
 	for (auto i : pRecords->GetRecords())
 	{
@@ -1335,6 +1352,9 @@ void DumpPlanets(CEspFile& espFile, const string Filename)
 			auto data = pGnam2->GetGnamData();
 			string StarName = StarNameMap[data.StarId];
 			File.Printf(",\"%d\",\"%s\",\"%d\",\"%d\"", data.StarId, StarName.c_str(), data.Primary, data.PlanetId);
+
+			string OrbitsName = data.Primary == 0 ? StarName : PlanetIndexMap[data.StarId][data.Primary];
+			File.Printf(",\"%s\"", OrbitsName.c_str());
 		}
 		else
 		{
@@ -2018,14 +2038,14 @@ int main()
 	//DumpLocations(espFile, "Locations.csv");
 	//DumpSunPresets(espFile, "SunPresets.csv");
 
-	//DumpStars(espFile, "Stars.csv");
-	//DumpPlanets(espFile, "Planets.csv");
+	DumpStars(espFile, "Stars.csv");
+	DumpPlanets(espFile, "Planets.csv");
 	//espFile.SaveRaw("Planets.esm", NAME_PNDT);
 
 	//DumpQuests(espFile, "Quests.csv");
 	//DumpQuestStages(espFile, "QuestStages.csv");
 	//DumpQuestObjectives(espFile, "QuestObjectives.csv");
-	DumpQuestScripts(espFile, "QuestScripts.csv");
+	//DumpQuestScripts(espFile, "QuestScripts.csv");
 
 	//DumpFlora(espFile, "Flora.csv");
 
@@ -2036,7 +2056,7 @@ int main()
 	//DumpGbfm(espFile, "Gbfm.csv");
 	//DumpFlst(espFile, "Flst.csv");
 
-	DumpDialogue(espFile, "Dialogue.csv");
+	//DumpDialogue(espFile, "Dialogue.csv");
 	
 
 	//auto s = CreateStringFilename("C:\\Downloads\\Starfield\\Starfield.esm", "ilstrings");
