@@ -177,6 +177,7 @@
     <ClCompile Include="..\..\Library\modfile\records\BookRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\CellRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\ClasRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\CobjRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\DialRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\EnchRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\EqupRecord.cpp" />
@@ -189,6 +190,7 @@
     <ClCompile Include="..\..\Library\modfile\records\idkeyrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\idrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\InfoRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\IresRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\item1record.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\item2record.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\LctnRecord.cpp" />
@@ -204,7 +206,9 @@
     <ClCompile Include="..\..\Library\modfile\records\SpelRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\StdtRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\SunpRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\TermRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\tes4record.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\TmlmRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\weaprecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\WrldRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\rectype.cpp" />
@@ -244,6 +248,7 @@
     <ClInclude Include="..\..\Library\modfile\records\BookRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\CellRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\ClasRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\CobjRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\DialRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\EnchRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\EqupRecord.h" />
@@ -256,6 +261,7 @@
     <ClInclude Include="..\..\Library\modfile\records\idkeyrecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\idrecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\InfoRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\IresRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\item1record.h" />
     <ClInclude Include="..\..\Library\modfile\records\item2record.h" />
     <ClInclude Include="..\..\Library\modfile\records\LctnRecord.h" />
@@ -271,7 +277,9 @@
     <ClInclude Include="..\..\Library\modfile\records\SpelRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\StdtRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\SunpRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\TermRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\tes4record.h" />
+    <ClInclude Include="..\..\Library\modfile\records\TmlmRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\weaprecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\WrldRecord.h" />
     <ClInclude Include="..\..\Library\modfile\rectype.h" />

@@ -240,6 +240,18 @@
     <ClCompile Include="..\..\Library\modfile\subrecords\VmadSubrecord.cpp">
       <Filter>Source Files\ModFile\SubRecords</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\CobjRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\TermRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\TmlmRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\IresRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Library\common\file.h">
@@ -508,6 +520,18 @@
     </ClInclude>
     <ClInclude Include="..\..\Library\modfile\subrecords\VmadSubrecord.h">
       <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\CobjRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\TermRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\TmlmRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\IresRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
