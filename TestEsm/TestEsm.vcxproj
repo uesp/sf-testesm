@@ -198,6 +198,7 @@
     <ClCompile Include="..\..\Library\modfile\records\MgefRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\MiscRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\NpcRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\OmodRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\PerkRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\PndtRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\QustRecord.cpp" />
@@ -218,6 +219,7 @@
     <ClCompile Include="..\..\Library\modfile\subrecords\gmstdatasubrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\subrecords\HnamPndtSubrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\subrecords\lstringsubrecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\subrecords\OmodDataSubrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\subrecords\stringsubrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\subrecords\subrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\subrecords\VmadSubrecord.cpp" />
@@ -269,6 +271,7 @@
     <ClInclude Include="..\..\Library\modfile\records\MgefRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\MiscRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\NpcRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\OmodRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\PerkRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\PndtRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\QustRecord.h" />
@@ -290,6 +293,7 @@
     <ClInclude Include="..\..\Library\modfile\subrecords\BookDataSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\boundssubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\bytesubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\CtdaSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\Data1StdtSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\Data2StdtSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\Data3StdtSubrecord.h" />
@@ -309,6 +313,7 @@
     <ClInclude Include="..\..\Library\modfile\subrecords\lstringsubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\MgefDataSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\MiscDataSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\OmodDataSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\SnamNpcSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\SpitSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\stringsubrecord.h" />

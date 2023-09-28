@@ -33,6 +33,7 @@
 #include "modfile/records/mgefrecord.h"
 #include "modfile/records/miscrecord.h"
 #include "modfile/records/npcrecord.h"
+#include "modfile/records/omodrecord.h"
 #include "modfile/records/perkrecord.h"
 #include "modfile/records/pndtrecord.h"
 #include "modfile/records/qustrecord.h"
@@ -1762,7 +1763,7 @@ void DumpFlst(CEspFile& espFile, const string Filename)
 }
 
 
-void DumpDialogueInfos(CQustRecord* pQuest, CDialRecord* pDialog, CGroup* pGroup, CFile& File)
+void DumpDialogueInfos(CEspFile& espFile, CQustRecord* pQuest, CDialRecord* pDialog, CGroup* pGroup, CFile& File)
 {
 	if (pQuest == nullptr || pDialog == nullptr || pGroup == nullptr) return;
 
@@ -1781,6 +1782,14 @@ void DumpDialogueInfos(CQustRecord* pQuest, CDialRecord* pDialog, CGroup* pGroup
 		CLStringSubrecord* pNam1 = nullptr;
 		CStringSubrecord* pNam2 = nullptr;
 		CStringSubrecord* pNam3 = nullptr;
+		CDwordSubrecord* pPerk = nullptr;
+		CCtdaSubrecord* pCtdaPerk = nullptr;
+		CCtdaSubrecord* pCtdaFaction = nullptr;
+		CCtdaSubrecord* pCtdaRank = nullptr;
+		CCtdaSubrecord* pGlobCtdaPerk = nullptr;
+		CCtdaSubrecord* pGlobCtdaFaction = nullptr;
+		CCtdaSubrecord* pGlobCtdaRank = nullptr;
+		//INAM, ENAM, CTDA, NAM4, NAM9
 		int infoCount = 0;
 
 		for (auto pSubrecord : pRec->GetSubrecordArray())
@@ -1793,6 +1802,33 @@ void DumpDialogueInfos(CQustRecord* pQuest, CDialRecord* pDialog, CGroup* pGroup
 					File.Printf(",\"%d\"", infoCount);
 					File.Printf(",\"0x%08X\"", pInfo->GetFormID());
 					File.Printf(",\"%s\"", pEditorID ? pEditorID->GetCString() : "");
+
+					auto pPerkRec = espFile.FindFormId<CPerkRecord>(pPerk ? pPerk->GetValue() : 0);
+					auto pPerkName = pPerkRec ? pPerkRec->FindSubrecord<CLStringSubrecord>(NAME_FULL) : nullptr;
+					
+					if (pPerk == nullptr && pCtdaPerk != nullptr)
+					{
+						pPerkRec = espFile.FindFormId<CPerkRecord>(pCtdaPerk->GetCtdaData().param1);
+						pPerkName = pPerkRec ? pPerkRec->FindSubrecord<CLStringSubrecord>(NAME_FULL) : nullptr;
+					}
+
+					File.Printf(",\"%s\"", pPerkName ? pPerkName->GetCString() : "");
+
+					auto pFactRec = pCtdaFaction ? espFile.FindFormId<CFactRecord>(pCtdaFaction->GetCtdaData().param1) : nullptr;
+					auto pFactName = pFactRec ? pFactRec->FindSubrecord<CLStringSubrecord>(NAME_FULL) : nullptr;
+					auto pFactEdid = pFactRec ? pFactRec->FindSubrecord<CStringSubrecord>(NAME_EDID) : nullptr;
+					auto FactString = pFactName ? pFactName->GetString() : (pFactEdid ? pFactEdid->GetString() : "");
+
+					if (pCtdaRank)
+					{
+						pFactRec = pCtdaRank ? espFile.FindFormId<CFactRecord>(pCtdaRank->GetCtdaData().param1) : nullptr;
+						auto pFactName = pFactRec ? pFactRec->FindSubrecord<CStringSubrecord>(NAME_EDID) : nullptr;
+						FactString += " / " + (pFactName ? pFactName->GetString() : "");
+						FactString += " (" + std::to_string(pCtdaRank->GetCtdaData().value) + ")";
+					}
+
+					File.Printf(",\"%s\"", FactString.c_str());
+
 					File.Printf(",\"%s\"", pNam1 ? EscapeCsv(pNam1->GetString()).c_str() : "");
 					File.Printf(",\"%s\"", pNam2 ? pNam2->GetCString() : "");
 					File.Printf(",\"%s\"", pNam3 ? pNam3->GetCString() : "");
@@ -1804,6 +1840,10 @@ void DumpDialogueInfos(CQustRecord* pQuest, CDialRecord* pDialog, CGroup* pGroup
 				pNam1 = nullptr;
 				pNam2 = nullptr;
 				pNam3 = nullptr;
+				pPerk = nullptr;
+				pCtdaPerk = pGlobCtdaPerk;
+				pCtdaFaction = pGlobCtdaFaction;
+				pCtdaRank = pGlobCtdaRank;
 
 				infoCount++;
 			}
@@ -1823,6 +1863,40 @@ void DumpDialogueInfos(CQustRecord* pQuest, CDialRecord* pDialog, CGroup* pGroup
 			{
 				pNam3 = dynamic_cast<CStringSubrecord *>(pSubrecord);
 			}
+			else if (pSubrecord->GetRecordType() == NAME_PERK)
+			{
+				pPerk = dynamic_cast<CDwordSubrecord *>(pSubrecord);
+			}
+			else if (pSubrecord->GetRecordType() == NAME_CTDA && pTrda == nullptr)
+			{
+				auto pCtda = dynamic_cast<CCtdaSubrecord *>(pSubrecord);
+
+				if (pCtda && pCtda->GetCtdaData().function == 448)
+					pGlobCtdaPerk = pCtda;
+				else if (pCtda && pCtda->GetCtdaData().function == 507)	//Not used?
+					pGlobCtdaRank = pCtda;
+				else if (pCtda && pCtda->GetCtdaData().function == 71)
+					pGlobCtdaFaction = pCtda;
+				else if (pCtda && pCtda->GetCtdaData().function == 73)	//Only used once?
+					pGlobCtdaRank = pCtda;
+
+				if (pCtda) SystemLog.Printf("INFO GLOB CTDA: %d %d %f %X", pCtda->GetCtdaData().type, pCtda->GetCtdaData().function, pCtda->GetCtdaData().value, pCtda->GetCtdaData().param1);
+			}
+			else if (pSubrecord->GetRecordType() == NAME_CTDA && pTrda)
+			{
+				auto pCtda = dynamic_cast<CCtdaSubrecord *>(pSubrecord);
+
+				if (pCtda && pCtda->GetCtdaData().function == 448)
+					pCtdaPerk = pCtda;
+				else if (pCtda && pCtda->GetCtdaData().function == 507)	//Not used?
+					pCtdaRank = pCtda;
+				else if (pCtda && pCtda->GetCtdaData().function == 71)
+					pCtdaFaction = pCtda;
+				else if (pCtda && pCtda->GetCtdaData().function == 73)	//Only used once?
+					pCtdaRank = pCtda;
+
+				if (pCtda) SystemLog.Printf("INFO TRDA CTDA: %d %d %f %X", pCtda->GetCtdaData().type, pCtda->GetCtdaData().function, pCtda->GetCtdaData().value, pCtda->GetCtdaData().param1);
+			}
 		}
 
 		if (pTrda != nullptr)
@@ -1831,6 +1905,33 @@ void DumpDialogueInfos(CQustRecord* pQuest, CDialRecord* pDialog, CGroup* pGroup
 			File.Printf(",\"%d\"", infoCount);
 			File.Printf(",\"0x%08X\"", pInfo->GetFormID());
 			File.Printf(",\"%s\"", pEditorID ? pEditorID->GetCString() : "");
+
+			auto pPerkRec = espFile.FindFormId<CPerkRecord>(pPerk ? pPerk->GetValue() : 0);
+			auto pPerkName = pPerkRec ? pPerkRec->FindSubrecord<CLStringSubrecord>(NAME_FULL) : nullptr;
+
+			if (pPerk == nullptr && pCtdaPerk != nullptr)
+			{
+				pPerkRec = espFile.FindFormId<CPerkRecord>(pCtdaPerk->GetCtdaData().param1);
+				pPerkName = pPerkRec ? pPerkRec->FindSubrecord<CLStringSubrecord>(NAME_FULL) : nullptr;
+			}
+
+			File.Printf(",\"%s\"", pPerkName ? pPerkName->GetCString() : "");
+
+			auto pFactRec = pCtdaFaction ? espFile.FindFormId<CFactRecord>(pCtdaFaction->GetCtdaData().param1) : nullptr;
+			auto pFactName = pFactRec ? pFactRec->FindSubrecord<CLStringSubrecord>(NAME_FULL) : nullptr;
+			auto pFactEdid = pFactRec ? pFactRec->FindSubrecord<CStringSubrecord>(NAME_EDID) : nullptr;
+			auto FactString = pFactName ? pFactName->GetString() : (pFactEdid ? pFactEdid ->GetString() : "");
+
+			if (pCtdaRank)
+			{
+				pFactRec = pCtdaRank ? espFile.FindFormId<CFactRecord>(pCtdaRank->GetCtdaData().param1) : nullptr;
+				auto pFactName = pFactRec ? pFactRec->FindSubrecord<CStringSubrecord>(NAME_EDID) : nullptr;
+				FactString += " / " + (pFactName ? pFactName->GetString() : "");
+				FactString += " (" + std::to_string(pCtdaRank->GetCtdaData().value) + ")";
+			}
+
+			File.Printf(",\"%s\"", FactString.c_str());
+
 			File.Printf(",\"%s\"", pNam1 ? EscapeCsv(pNam1->GetString()).c_str() : "");
 			File.Printf(",\"%s\"", pNam2 ? pNam2->GetCString() : "");
 			File.Printf(",\"%s\"", pNam3 ? pNam3->GetCString() : "");
@@ -1841,7 +1942,7 @@ void DumpDialogueInfos(CQustRecord* pQuest, CDialRecord* pDialog, CGroup* pGroup
 }
 
 
-void DumpDialogueGroup(CQustRecord* pQuest, CGroup* pGroup, CFile& File)
+void DumpDialogueGroup(CEspFile& espFile, CQustRecord* pQuest, CGroup* pGroup, CFile& File)
 {
 	CDialRecord* pLastDial = nullptr;
 
@@ -1889,7 +1990,7 @@ void DumpDialogueGroup(CQustRecord* pQuest, CGroup* pGroup, CFile& File)
 		}
 		else if (pRecord->IsGroup())
 		{
-			DumpDialogueInfos(pQuest, pLastDial, dynamic_cast<CGroup*>(pRecord), File);
+			DumpDialogueInfos(espFile, pQuest, pLastDial, dynamic_cast<CGroup*>(pRecord), File);
 		}
 	}
 
@@ -1904,13 +2005,13 @@ void DumpDialogue(CEspFile& espFile, const string Filename)
 
 	if (!File.Open(Filename, "wt")) return;
 
-	File.Printf("Type, QuestEditorID, QuestName, FormId, EditorId, Flags, Priority, QNAM, BNAM, Subtype, FULL, InfoNum, InfoFormId, InfoEditorId, InfoNam1, InfoNam2, InfoNam3\n");
+	File.Printf("Type, QuestEditorID, QuestName, FormId, EditorId, Flags, Priority, QNAM, BNAM, Subtype, FULL, InfoNum, InfoFormId, InfoEditorId, InfoPerk, InfoFaction, InfoNam1, InfoNam2, InfoNam3\n");
 
 	for (auto pRecord : pQuests->GetRecords())
 	{
 		if (pRecord->GetRecordType() == NAME_QUST) pLastQuest = dynamic_cast<CQustRecord*>(pRecord);
 
-		if (pRecord->IsGroup()) DumpDialogueGroup(pLastQuest, dynamic_cast<CGroup *>(pRecord), File);
+		if (pRecord->IsGroup()) DumpDialogueGroup(espFile, pLastQuest, dynamic_cast<CGroup *>(pRecord), File);
 
 	}
 }
@@ -2273,10 +2374,11 @@ void DumpTmlm(CEspFile& espFile, const string Filename)
 			auto pEditorID = pTmlm ? pTmlm->FindSubrecord<CStringSubrecord>(NAME_EDID) : nullptr;
 
 			File.Printf(",\"%d\"", index);
-			File.Printf(",\"%s\"", pLastItxt ? EscapeCsv(pLastItxt->GetString()).c_str() : "");
+			File.Printf(",\"%s\"", pLastItxt ? pLastItxt->GetCString() : "");
 			File.Printf(",\"%s\"", pIstx ? EscapeCsv(pIstx->GetString()).c_str() : 0);
 			File.Printf(",\"%d\"", (int)(pItid ? pItid->GetValue() : 0));
 			File.Printf(",\"%s\"", pEditorID ? pEditorID->GetCString() : "");
+			File.Printf(",\"%s\"", pUnam ? EscapeCsv(pUnam->GetString()).c_str() : "");
 			File.Printf("\n");
 		}
 	}
@@ -2323,6 +2425,149 @@ void DumpIres(CEspFile& espFile, const string Filename)
 		File.Printf(",\"0x%08X\"", pCnam ? pCnam->GetValue() : 0);
 
 		File.Printf("\n");
+	}
+
+}
+
+
+void DumpOmod(CEspFile& espFile, const string Filename)
+{
+	auto pRecords = espFile.GetTypeGroup(NAME_OMOD);
+	CFile File;
+
+	if (!File.Open(Filename, "wt")) return;
+
+	File.Printf("FormID, EditorID, Full, Description, Model, FLLD, NAM1, XFLG, Includes, Properties, AttachParentSlots, DataName, AttachPointFormId, AttachPoint, Unknown1, Unknown2, Unknown3\n");
+
+	for (auto i : pRecords->GetRecords())
+	{
+		auto pRecord = dynamic_cast<COmodRecord *>(i);
+		if (pRecord == nullptr) continue;
+
+		File.Printf("0x%08X", pRecord->GetFormID());
+
+		auto pEditorID = pRecord->FindSubrecord<CStringSubrecord>(NAME_EDID);
+		auto pFull = pRecord->FindSubrecord<CLStringSubrecord>(NAME_FULL);
+		auto pDesc = pRecord->FindSubrecord<CLStringSubrecord>(NAME_DESC);
+		auto pModl = pRecord->FindSubrecord<CStringSubrecord>(NAME_MODL);
+		
+		File.Printf(",\"%s\"", pEditorID ? pEditorID->GetCString() : "");
+		File.Printf(",\"%s\"", pFull ? EscapeCsv(pFull->GetString()).c_str() : "");
+		File.Printf(",\"%s\"", pDesc ? EscapeCsv(pDesc->GetString()).c_str() : "");
+		File.Printf(",\"%s\"", pModl ? EscapeCsv(pModl->GetString()).c_str() : "");
+				
+		auto pFlld = pRecord->FindSubrecord<CDwordSubrecord>(NAME_FLLD);
+		auto pNam1 = pRecord->FindSubrecord<CByteSubrecord>(NAME_NAM1);
+		auto pXflg = pRecord->FindSubrecord<CByteSubrecord>(NAME_XFLG);
+
+		File.Printf(",%d", pFlld ? pFlld->GetValue() : 0);
+		File.Printf(",%d", pNam1 ? pNam1->GetValue() : 0);
+		File.Printf(",%d", pXflg ? pXflg->GetValue() : 0);
+
+		auto pData = pRecord->FindSubrecord<COmodDataSubrecord>(NAME_DATA);
+
+		if (pData)
+		{
+			auto data = pData->GetOmodData();
+			File.Printf(",%d,%d,%d", data.includeCount, data.propertyCount, data.attachParentSlotCount);
+			File.Printf(",\"%s\"", data.name.c_str());
+
+			auto pAttach = espFile.FindFormId<CIdRecord>(data.attachPointFormId);
+			auto pAttachEditorId = pAttach ? pAttach->FindSubrecord<CStringSubrecord>(NAME_EDID) : nullptr;
+			File.Printf(",0x%08X", data.attachPointFormId);
+			File.Printf(",\"%s\"", pAttachEditorId ? pAttachEditorId->GetCString() : "");
+
+			File.Printf(",0x%04X,0x%04X,0x%08X", data.unknown1, data.unknown2, data.unknown3);
+		}
+		else
+		{
+			File.Printf(",0,0,0,\"\",0,\"\",0,0,0");
+		}
+
+		File.Printf("\n");
+	}
+
+}
+
+
+void DumpOmodProperties(CEspFile& espFile, const string Filename)
+{
+	auto pRecords = espFile.GetTypeGroup(NAME_OMOD);
+	CFile File;
+
+	if (!File.Open(Filename, "wt")) return;
+
+	File.Printf("OModFormID, OModEditorID, OModFull, Index, ValueType, FunctionType, PropertyName, Value1, Value2, Step\n");
+
+	for (auto i : pRecords->GetRecords())
+	{
+		auto pRecord = dynamic_cast<COmodRecord *>(i);
+		if (pRecord == nullptr) continue;
+		auto pEditorID = pRecord->FindSubrecord<CStringSubrecord>(NAME_EDID);
+		auto pFull = pRecord->FindSubrecord<CLStringSubrecord>(NAME_FULL);
+
+		auto pData = pRecord->FindSubrecord<COmodDataSubrecord>(NAME_DATA);
+		if (pData == nullptr) continue;
+
+		auto data = pData->GetOmodData();
+		dword index = 0;
+
+		bool isFloat = false;
+		bool isFormId = false;
+		float testFloat = 0;
+
+		for (auto p : data.properties)
+		{ 
+			++index;
+
+			File.Printf("0x%08X", pRecord->GetFormID());
+			File.Printf(",\"%s\"", pEditorID ? pEditorID->GetCString() : "");
+			File.Printf(",\"%s\"", pFull ? EscapeCsv(pFull->GetString()).c_str() : "");
+			File.Printf(",%d", index);
+			File.Printf(",%d", p.valueType);
+			File.Printf(",%d", p.valueFunction);
+			File.Printf(",%4.4s", p.propertyName.Name);
+
+			isFloat = false;
+			isFormId = false;
+			testFloat = *(float *)&p.value1;
+			isFloat = (testFloat > -10000 && testFloat < 10000);
+			isFormId = (espFile.FindFormId(p.value1) != nullptr);
+
+			if (p.valueType == 4 || p.valueType == 6)
+			{
+				auto pRec = espFile.FindFormId<CRecord>(p.value1);
+				auto pEdid = pRec ? pRec->FindSubrecord<CStringSubrecord>(NAME_EDID) : nullptr;
+				
+				if (pEdid)
+					File.Printf(",\"%4.4s:%08X %s\"", pRec->GetRecordType().Name, p.value1, pEdid->GetCString());
+				else if (pRec)
+					File.Printf(",\"%4.4s:%08X\"", pRec->GetRecordType().Name, p.value1);
+				else
+					File.Printf(",\"%08X\"", p.value1);
+
+				//File.Printf(",\"formid\"");
+			}
+			else if (p.valueType == 1)
+			{
+				File.Printf(",%f", testFloat);
+				//File.Printf(",\"float\"");
+			}
+			else
+			{
+				File.Printf(",%d", p.value1);
+				//File.Printf(",\"dword\"");
+			}
+
+			if (p.valueType == 1 || p.valueType == 6)
+				File.Printf(",%f", p.value2);
+			else
+				File.Printf(",%d", *(dword *)&p.value2);
+
+			File.Printf(",%f", p.step);
+
+			File.Printf("\n");
+		}
 	}
 
 }
@@ -2395,14 +2640,16 @@ int main()
 	//DumpGbfm(espFile, "Gbfm.csv");
 	//DumpFlst(espFile, "Flst.csv");
 
-	//DumpDialogue(espFile, "Dialogue.csv");
+	DumpDialogue(espFile, "Dialogue.csv");
 
 	//DumpTerm(espFile, "Term.csv");
 	//DumpTmlm(espFile, "Tmlm.csv");
 
-	DumpIres(espFile, "Ires.csv");
-	DumpCobj(espFile, "Cobj.csv");
-	
+	//DumpIres(espFile, "Ires.csv");
+	//DumpCobj(espFile, "Cobj.csv");
+
+	//DumpOmod(espFile, "Omod.csv");
+	//DumpOmodProperties(espFile, "OmodProperties.csv");	
 
 	//auto s = CreateStringFilename("C:\\Downloads\\Starfield\\Starfield.esm", "ilstrings");
 	//printf(s.c_str());
