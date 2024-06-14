@@ -258,6 +258,18 @@
     <ClCompile Include="..\..\Library\modfile\subrecords\OmodDataSubrecord.cpp">
       <Filter>Source Files\ModFile\SubRecords</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\subrecords\ObtsSubrecord.cpp">
+      <Filter>Source Files\ModFile\SubRecords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\ModUtils.cpp">
+      <Filter>Source Files\ModFile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\subrecords\formidarraysubrecord.cpp">
+      <Filter>Source Files\ModFile\SubRecords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\LvliRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Library\common\file.h">
@@ -546,6 +558,24 @@
       <Filter>Header Files\ModFile\Subrecords</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Library\modfile\subrecords\CtdaSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\ObtsSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\ModUtils.h">
+      <Filter>Header Files\ModFile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\formidarraysubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\LvliRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\LvloSubrecord.h">
+      <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\subrecords\LlkcSubrecord.h">
       <Filter>Header Files\ModFile\Subrecords</Filter>
     </ClInclude>
   </ItemGroup>

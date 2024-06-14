@@ -7,6 +7,7 @@
 #include "common/logfile.h"
 #include "stringfile/StringFile.h"
 #include "modfile/espfile.h"
+#include "modfile/modutils.h"
 #include "common/utils.h"
 #include "modfile/records/alchrecord.h"
 #include "modfile/records/ammorecord.h"
@@ -30,6 +31,7 @@
 #include "modfile/records/iresrecord.h"
 #include "modfile/records/lctnrecord.h"
 #include "modfile/records/lscrrecord.h"
+#include "modfile/records/lvlirecord.h"
 #include "modfile/records/mgefrecord.h"
 #include "modfile/records/miscrecord.h"
 #include "modfile/records/npcrecord.h"
@@ -92,7 +94,7 @@ std::unordered_map<dword, string> StarNameMap;
 std::unordered_map<dword, std::unordered_map<dword, string>> PlanetIndexMap;
 
 
-string EscapeCsv(string& Orig)
+string EscapeCsv(const string Orig)
 {
 	string Buffer = Orig;
 	size_t pos = 0;
@@ -1398,7 +1400,6 @@ void DumpPlanets(CEspFile& espFile, const string Filename)
 }
 
 
-
 void DumpQuests(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_QUST);
@@ -1406,7 +1407,7 @@ void DumpQuests(CEspFile& espFile, const string Filename)
 
 	if (!File.Open(Filename, "wt")) return;
 
-	File.Printf("FormID, EditorID, Full\n");
+	File.Printf("FormID, EditorID, Full, Summary\n");
 
 	for (auto i : pRecords->GetRecords())
 	{
@@ -1420,6 +1421,10 @@ void DumpQuests(CEspFile& espFile, const string Filename)
 
 		File.Printf(",\"%s\"", pEditorID ? pEditorID->GetCString() : "");
 		File.Printf(",\"%s\"", pFull ? pFull->GetCString() : "");
+
+		auto pSummary = pRecord->FindSubrecord<CStringSubrecord>(NAME_NAM3);
+
+		File.Printf(",\"%s\"", EscapeCsv(pSummary ? pSummary->GetString() : "").c_str());
 
 		File.Printf("\n");
 	}
@@ -1772,7 +1777,7 @@ void DumpDialogueInfos(CEspFile& espFile, CQustRecord* pQuest, CDialRecord* pDia
 		auto pInfo = dynamic_cast<CInfoRecord*>(pRecord);
 		if (pInfo == nullptr) continue;
 
-		auto pEditorID = pInfo->FindSubrecord<CStringSubrecord>(NAME_EDID);
+		auto editorID = pInfo->GetEditorId();
 
 		auto pRec = dynamic_cast<CRecord *>(pRecord);
 		if (pRec == nullptr) continue;
@@ -1783,12 +1788,15 @@ void DumpDialogueInfos(CEspFile& espFile, CQustRecord* pQuest, CDialRecord* pDia
 		CStringSubrecord* pNam2 = nullptr;
 		CStringSubrecord* pNam3 = nullptr;
 		CDwordSubrecord* pPerk = nullptr;
+		CDwordSubrecord* pGnam = nullptr;
 		CCtdaSubrecord* pCtdaPerk = nullptr;
 		CCtdaSubrecord* pCtdaFaction = nullptr;
 		CCtdaSubrecord* pCtdaRank = nullptr;
 		CCtdaSubrecord* pGlobCtdaPerk = nullptr;
 		CCtdaSubrecord* pGlobCtdaFaction = nullptr;
 		CCtdaSubrecord* pGlobCtdaRank = nullptr;
+		CDwordSubrecord* pGlobGnam = nullptr;
+		
 		//INAM, ENAM, CTDA, NAM4, NAM9
 		int infoCount = 0;
 
@@ -1801,7 +1809,7 @@ void DumpDialogueInfos(CEspFile& espFile, CQustRecord* pQuest, CDialRecord* pDia
 					File.Printf("\"INFO\",,,,,,,,,,");
 					File.Printf(",\"%d\"", infoCount);
 					File.Printf(",\"0x%08X\"", pInfo->GetFormID());
-					File.Printf(",\"%s\"", pEditorID ? pEditorID->GetCString() : "");
+					File.Printf(",\"%s\"", editorID.c_str());
 
 					auto pPerkRec = espFile.FindFormId<CPerkRecord>(pPerk ? pPerk->GetValue() : 0);
 					auto pPerkName = pPerkRec ? pPerkRec->FindSubrecord<CLStringSubrecord>(NAME_FULL) : nullptr;
@@ -1830,8 +1838,20 @@ void DumpDialogueInfos(CEspFile& espFile, CQustRecord* pQuest, CDialRecord* pDia
 					File.Printf(",\"%s\"", FactString.c_str());
 
 					File.Printf(",\"%s\"", pNam1 ? EscapeCsv(pNam1->GetString()).c_str() : "");
-					File.Printf(",\"%s\"", pNam2 ? pNam2->GetCString() : "");
-					File.Printf(",\"%s\"", pNam3 ? pNam3->GetCString() : "");
+					File.Printf(",\"%s\"", pNam2 ? EscapeCsv(pNam2->GetString()).c_str() : "");
+					File.Printf(",\"%s\"", pNam3 ? EscapeCsv(pNam3->GetString()).c_str() : "");
+
+					if (pGnam)
+					{
+						auto pGnamInfo = espFile.FindFormId<CInfoRecord>(pGnam->GetValue());
+						File.Printf(",\"0x%08X\"", pGnam->GetValue());
+						File.Printf(",\"%s\"", pGnamInfo ? pGnamInfo->GetEditorId().c_str() : "");
+					}
+					else
+					{
+						File.Printf(",,");
+					}
+
 					File.Printf("\n");
 				}
 
@@ -1841,6 +1861,7 @@ void DumpDialogueInfos(CEspFile& espFile, CQustRecord* pQuest, CDialRecord* pDia
 				pNam2 = nullptr;
 				pNam3 = nullptr;
 				pPerk = nullptr;
+				pGnam = pGlobGnam;
 				pCtdaPerk = pGlobCtdaPerk;
 				pCtdaFaction = pGlobCtdaFaction;
 				pCtdaRank = pGlobCtdaRank;
@@ -1866,6 +1887,11 @@ void DumpDialogueInfos(CEspFile& espFile, CQustRecord* pQuest, CDialRecord* pDia
 			else if (pSubrecord->GetRecordType() == NAME_PERK)
 			{
 				pPerk = dynamic_cast<CDwordSubrecord *>(pSubrecord);
+			}
+			else if (pSubrecord->GetRecordType() == NAME_GNAM)
+			{
+				pGnam = dynamic_cast<CDwordSubrecord *>(pSubrecord);
+				pGlobGnam = pGnam;
 			}
 			else if (pSubrecord->GetRecordType() == NAME_CTDA && pTrda == nullptr)
 			{
@@ -1904,7 +1930,7 @@ void DumpDialogueInfos(CEspFile& espFile, CQustRecord* pQuest, CDialRecord* pDia
 			File.Printf("\"INFO\",,,,,,,,,,");
 			File.Printf(",\"%d\"", infoCount);
 			File.Printf(",\"0x%08X\"", pInfo->GetFormID());
-			File.Printf(",\"%s\"", pEditorID ? pEditorID->GetCString() : "");
+			File.Printf(",\"%s\"", editorID.c_str());
 
 			auto pPerkRec = espFile.FindFormId<CPerkRecord>(pPerk ? pPerk->GetValue() : 0);
 			auto pPerkName = pPerkRec ? pPerkRec->FindSubrecord<CLStringSubrecord>(NAME_FULL) : nullptr;
@@ -1933,8 +1959,20 @@ void DumpDialogueInfos(CEspFile& espFile, CQustRecord* pQuest, CDialRecord* pDia
 			File.Printf(",\"%s\"", FactString.c_str());
 
 			File.Printf(",\"%s\"", pNam1 ? EscapeCsv(pNam1->GetString()).c_str() : "");
-			File.Printf(",\"%s\"", pNam2 ? pNam2->GetCString() : "");
-			File.Printf(",\"%s\"", pNam3 ? pNam3->GetCString() : "");
+			File.Printf(",\"%s\"", pNam2 ? EscapeCsv(pNam2->GetString()).c_str() : "");
+			File.Printf(",\"%s\"", pNam3 ? EscapeCsv(pNam3->GetString()).c_str() : "");
+
+			if (pGnam)
+			{
+				auto pGnamInfo = espFile.FindFormId<CInfoRecord>(pGnam->GetValue());
+				File.Printf(",\"0x%08X\"", pGnam->GetValue());
+				File.Printf(",\"%s\"", pGnamInfo ? pGnamInfo->GetEditorId().c_str() : "");
+			}
+			else
+			{
+				File.Printf(",,");
+			}
+
 			File.Printf("\n");
 		}
 	}
@@ -2005,7 +2043,7 @@ void DumpDialogue(CEspFile& espFile, const string Filename)
 
 	if (!File.Open(Filename, "wt")) return;
 
-	File.Printf("Type, QuestEditorID, QuestName, FormId, EditorId, Flags, Priority, QNAM, BNAM, Subtype, FULL, InfoNum, InfoFormId, InfoEditorId, InfoPerk, InfoFaction, InfoNam1, InfoNam2, InfoNam3\n");
+	File.Printf("Type, QuestEditorID, QuestName, FormId, EditorId, Flags, Priority, QNAM, BNAM, Subtype, FULL, InfoNum, InfoFormId, InfoEditorId, InfoPerk, InfoFaction, InfoNam1, InfoNam2, InfoNam3, InfoGNamForm, InfoGNamEditorId\n");
 
 	for (auto pRecord : pQuests->GetRecords())
 	{
@@ -2573,6 +2611,186 @@ void DumpOmodProperties(CEspFile& espFile, const string Filename)
 }
 
 
+void DumpCreatures(CEspFile& espFile, const string Filename)
+{
+	auto pRecords = espFile.GetTypeGroup(NAME_NPC_);
+	CFile File;
+
+	if (!File.Open(Filename, "wt")) return;
+
+	File.Printf("FormID, EditorID, Full, Keywords\n");
+
+	for (auto i : pRecords->GetRecords())
+	{
+		auto pRecord = dynamic_cast<CNpcRecord *>(i);
+		if (pRecord == nullptr) continue;
+
+		if (!pRecord->HasKeyword(0x1e667f)) continue;
+
+		File.Printf("0x%08X", pRecord->GetFormID());
+		File.Printf(",\"%s\"", pRecord->GetEditorId().c_str());
+		File.Printf(",\"%s\"", EscapeCsv(GetRecordItemName(pRecord)).c_str());
+
+		File.Printf("\n");
+	}
+}
+
+
+void DumpLvli(CEspFile& espFile, const string Filename)
+{
+	auto pRecords = espFile.GetTypeGroup(NAME_LVLI);
+	CFile File;
+
+	if (!File.Open(Filename, "wt")) return;
+
+	File.Printf("FormID, EditorID, Model, ChanceNone, Flags, FlagText, Count, MaxCount, UseGlobal, LVLL, Override Name\n");
+
+	for (auto i : pRecords->GetRecords())
+	{
+		auto pRecord = dynamic_cast<CLvliRecord *>(i);
+		if (pRecord == nullptr) continue;
+
+		auto pModl = pRecord->FindSubrecord<CStringSubrecord>(NAME_MODL);
+
+		File.Printf("0x%08X", pRecord->GetFormID());
+		File.Printf(",\"%s\"", pRecord->GetEditorId().c_str());
+		File.Printf(",\"%s\"", pModl ? EscapeCsv(pModl->GetString()).c_str() : "");
+
+		float ChanceNone = pRecord->GetSubrecordValue(NAME_LVLD, 0.0f);
+		int Flags = pRecord->GetSubrecordValue(NAME_LVLF, (word)0);
+		int Count = pRecord->GetSubrecordValue(NAME_LLCT, (byte)0);
+		int MaxCount = pRecord->GetSubrecordValue(NAME_LVLM, (byte)0);
+		int Lvll = pRecord->GetSubrecordValue(NAME_LVLL, (byte)0);
+		dword UseGlobal = pRecord->GetSubrecordValue(NAME_LVLG, (dword)0);
+		string Onam = pRecord->GetSubrecordValue(NAME_ONAM, "");
+
+		File.Printf(",%f", ChanceNone);
+
+		File.Printf(",%d,\"", Flags);
+		if (Flags & 1) File.Printf("AllLevels ");
+		if (Flags & 2) File.Printf("EachItem ");
+		if (Flags & 4) File.Printf("UseAll ");
+		if (Flags & 8) File.Printf("U8 ");
+		if (Flags & 16) File.Printf("U16 ");
+		if (Flags & 32) File.Printf("U32 ");
+		if (Flags & 64) File.Printf("U64 ");
+		if (Flags & 128) File.Printf("U128 ");
+		if (Flags & 256) File.Printf("U256 ");
+
+		File.Printf("\",%d", Count);
+		File.Printf(",%d", MaxCount);
+		File.Printf(",%d", UseGlobal);
+		File.Printf(",%d", Lvll);
+		File.Printf(",\"%s\"", EscapeCsv(Onam).c_str());
+
+		File.Printf("\n");
+	}
+}
+
+void DumpLvliEntries(CEspFile& espFile, const string Filename)
+{
+	auto pRecords = espFile.GetTypeGroup(NAME_LVLI);
+	CFile File;
+
+	if (!File.Open(Filename, "wt")) return;
+
+	File.Printf("LvliFormID, LvliEditorID, Index, Level,  Count, ChanceNone, FormID, EditorID, Type\n");
+
+	for (auto i : pRecords->GetRecords())
+	{
+		auto pRecord = dynamic_cast<CLvliRecord *>(i);
+		if (pRecord == nullptr) continue;
+
+		auto lvliEditorId = pRecord->GetEditorId();
+		auto lvliFormId = pRecord->GetFormID();
+
+		auto items = pRecord->FindAllSubrecords<CLvloSubrecord>(NAME_LVLO);
+		auto index = 0;
+
+		for (auto j : items)
+		{
+			auto data = j->GetLvloData();
+			++index;
+
+			File.Printf("0x%08X", lvliFormId);
+			File.Printf(",\"%s\"", lvliEditorId.c_str());
+			File.Printf(",%d", index);
+
+			File.Printf(",%d", (int)data.Level);
+			File.Printf(",%d", (int)data.Count);
+			File.Printf(",%d", (int)data.ChanceNone);
+			File.Printf(",0x%08X", data.ItemFormId);
+
+			auto pItemRecord = espFile.FindFormId<CRecord>(data.ItemFormId);
+			auto pItemEdid = pItemRecord ? pItemRecord->FindSubrecord<CStringSubrecord>(NAME_EDID) : nullptr;
+
+			File.Printf(",\"%s\"", pItemEdid ? pItemEdid->GetCString() : "");
+			File.Printf(",\"%4.4s\"", pItemRecord ? pItemRecord->GetRecordType().Name : "");
+
+			File.Printf("\n");
+		}
+		
+	}
+}
+
+
+void DumpLvliWeapons(CEspFile& espFile, const string Filename)
+{
+	auto pRecords = espFile.GetTypeGroup(NAME_LVLI);
+	CFile File;
+
+	if (!File.Open(Filename, "wt")) return;
+
+	File.Printf("LvliFormID, LvliEditorID, Index\n");
+
+	for (auto i : pRecords->GetRecords())
+	{
+		auto pRecord = dynamic_cast<CLvliRecord *>(i);
+		if (pRecord == nullptr) continue;
+
+		auto lvliEditorId = pRecord->GetEditorId();
+		auto lvliFormId = pRecord->GetFormID();
+
+		auto items = pRecord->FindAllSubrecords<CLvloSubrecord>(NAME_LVLO);
+		auto index = 0;
+		auto hasWeapons = false;
+
+		for (auto j : items)
+		{
+			if (j->GetRecordType() == NAME_WEAP)
+			{
+				hasWeapons = true;
+				break;
+			}
+		}
+
+		if (!hasWeapons) continue;
+
+		for (auto j : items)
+		{
+			auto data = j->GetLvloData();
+			++index;
+
+			File.Printf("0x%08X", lvliFormId);
+			File.Printf(",\"%s\"", lvliEditorId.c_str());
+			File.Printf(",%d", index);
+
+			auto pWeapon = espFile.FindFormId<CWeapRecord>(data.ItemFormId);
+
+			if (pWeapon == nullptr)
+			{
+				File.Printf("\n");
+				continue;
+			}
+
+			
+			File.Printf("\n");
+		}
+
+	}
+}
+
+
 int main()
 {
 	SystemLog.Open("testesm.log");
@@ -2590,6 +2808,7 @@ int main()
 	//espFile.OutputStats("BlueprintShips-Starfield_Stats.txt");
 
 	espFile.Load("C:\\Downloads\\Starfield\\Starfield.esm");
+	//espFile.Load("C:\\Program Files(x86)\\Steam\\steamapps\\common\\Starfield\\Data\\Starfield.esm"); 
 	//espFile.OutputStats("Starfield_Stats.txt");
 
 	//DumpStructure(espFile, "Structure.txt");
@@ -2604,7 +2823,10 @@ int main()
 
 	//DumpFurnitures(espFile, "Furniture.csv");
 	//DumpMisc(espFile, "Misc.csv");
+
 	//DumpNpcs(espFile, "Npcs.csv");
+	//espFile.SaveRaw("Npcs.esm", NAME_NPC_);
+
 	//DumpRaces(espFile, "Races.csv");
 	//DumpFactions(espFile, "Factions.csv");
 
@@ -2626,7 +2848,7 @@ int main()
 	//DumpPlanets(espFile, "Planets.csv");
 	//espFile.SaveRaw("Planets.esm", NAME_PNDT);
 
-	//DumpQuests(espFile, "Quests.csv");
+	DumpQuests(espFile, "Quests2.csv");
 	//DumpQuestStages(espFile, "QuestStages.csv");
 	//DumpQuestObjectives(espFile, "QuestObjectives.csv");
 	//DumpQuestScripts(espFile, "QuestScripts.csv");
@@ -2640,7 +2862,7 @@ int main()
 	//DumpGbfm(espFile, "Gbfm.csv");
 	//DumpFlst(espFile, "Flst.csv");
 
-	DumpDialogue(espFile, "Dialogue.csv");
+	//DumpDialogue(espFile, "Dialogue.csv");
 
 	//DumpTerm(espFile, "Term.csv");
 	//DumpTmlm(espFile, "Tmlm.csv");
@@ -2650,6 +2872,12 @@ int main()
 
 	//DumpOmod(espFile, "Omod.csv");
 	//DumpOmodProperties(espFile, "OmodProperties.csv");	
+
+	//DumpCreatures(espFile, "Fauna.csv");
+
+	//DumpLvli(espFile, "Lvli.csv");
+	//DumpLvliEntries(espFile, "LvliEntries.csv");
+	//DumpLvliWeapons(espFile, "LvliWeapons.csv");
 
 	//auto s = CreateStringFilename("C:\\Downloads\\Starfield\\Starfield.esm", "ilstrings");
 	//printf(s.c_str());

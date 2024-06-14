@@ -167,6 +167,7 @@
     <ClCompile Include="..\..\Library\modfile\groups\group.cpp" />
     <ClCompile Include="..\..\Library\modfile\groups\typegroup.cpp" />
     <ClCompile Include="..\..\Library\modfile\moddefs.cpp" />
+    <ClCompile Include="..\..\Library\modfile\ModUtils.cpp" />
     <ClCompile Include="..\..\Library\modfile\recordcreate.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\AlchRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\AmmoRecord.cpp" />
@@ -195,6 +196,7 @@
     <ClCompile Include="..\..\Library\modfile\records\item2record.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\LctnRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\LscrRecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\LvliRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\MgefRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\MiscRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\NpcRecord.cpp" />
@@ -216,9 +218,11 @@
     <ClCompile Include="..\..\Library\modfile\subrecords\Data2StdtSubrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\subrecords\datasubrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\subrecords\DnamPndtSubrecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\subrecords\formidarraysubrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\subrecords\gmstdatasubrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\subrecords\HnamPndtSubrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\subrecords\lstringsubrecord.cpp" />
+    <ClCompile Include="..\..\Library\modfile\subrecords\ObtsSubrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\subrecords\OmodDataSubrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\subrecords\stringsubrecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\subrecords\subrecord.cpp" />
@@ -241,6 +245,7 @@
     <ClInclude Include="..\..\Library\modfile\groups\group.h" />
     <ClInclude Include="..\..\Library\modfile\groups\typegroup.h" />
     <ClInclude Include="..\..\Library\modfile\moddefs.h" />
+    <ClInclude Include="..\..\Library\modfile\ModUtils.h" />
     <ClInclude Include="..\..\Library\modfile\records\AlchRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\AmmoRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\ArmoRecord.h" />
@@ -268,6 +273,7 @@
     <ClInclude Include="..\..\Library\modfile\records\item2record.h" />
     <ClInclude Include="..\..\Library\modfile\records\LctnRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\LscrRecord.h" />
+    <ClInclude Include="..\..\Library\modfile\records\LvliRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\MgefRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\MiscRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\NpcRecord.h" />
@@ -305,14 +311,18 @@
     <ClInclude Include="..\..\Library\modfile\subrecords\EnitSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\floatsubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\FnamPndtSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\formidarraysubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\formidsubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\gmstdatasubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\GnamPndtSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\HnamPndtSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\LctnDataSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\LlkcSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\lstringsubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\LvloSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\MgefDataSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\MiscDataSubrecord.h" />
+    <ClInclude Include="..\..\Library\modfile\subrecords\ObtsSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\OmodDataSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\SnamNpcSubrecord.h" />
     <ClInclude Include="..\..\Library\modfile\subrecords\SpitSubrecord.h" />
