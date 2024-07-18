@@ -1,0 +1,3 @@
+QuestFormID, QuestEditorID, QuestName, Script, Fragment
+0xFE000020,"SQ_PEO_SleepHealing","","PEO:PEO_SleepHealingScript",
+0xFE000040,"SQ_PEO_SustenanceQuest","","PEO:PEO_SustenanceStart",

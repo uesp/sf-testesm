@@ -40,6 +40,7 @@
 #include "modfile/records/pndtrecord.h"
 #include "modfile/records/qustrecord.h"
 #include "modfile/records/racerecord.h"
+#include "modfile/records/refrrecord.h"
 #include "modfile/records/spelrecord.h"
 #include "modfile/records/stdtrecord.h"
 #include "modfile/records/sunprecord.h"
@@ -1406,6 +1407,7 @@ void DumpQuests(CEspFile& espFile, const string Filename)
 	CFile File;
 
 	if (!File.Open(Filename, "wt")) return;
+	if (pRecords == nullptr) return;
 
 	File.Printf("FormID, EditorID, Full, Summary\n");
 
@@ -1438,6 +1440,7 @@ void DumpQuestStages(CEspFile& espFile, const string Filename)
 	CFile File;
 
 	if (!File.Open(Filename, "wt")) return;
+	if (pRecords == nullptr) return;
 
 	File.Printf("QuestFormID, QuestEditorID, QuestFull, INDX1, INDX2, NAM2, CNAM\n");
 
@@ -1492,6 +1495,7 @@ void DumpQuestObjectives(CEspFile& espFile, const string Filename)
 	CFile File;
 
 	if (!File.Open(Filename, "wt")) return;
+	if (pRecords == nullptr) return;
 
 	File.Printf("QuestFormID, QuestEditorID, QuestFull, Index, Flags, NNAM\n");
 
@@ -1541,6 +1545,7 @@ void DumpQuestScripts(CEspFile& espFile, const string Filename)
 	CFile File;
 
 	if (!File.Open(Filename, "wt")) return;
+	if (pRecords == nullptr) return;
 
 	File.Printf("QuestFormID, QuestEditorID, QuestName, Script, Fragment\n");
 
@@ -2734,6 +2739,162 @@ void DumpLvliEntries(CEspFile& espFile, const string Filename)
 }
 
 
+void DumpRefUsesWorldCells(CFile& CsvFile, CEspFile& espFile, CWrldRecord* pLastWorld, CGroup* pLastGroup)
+{
+	if (pLastWorld == nullptr || pLastGroup == nullptr) return;
+
+	auto refs = pLastGroup->FindAllRecords<CRefrRecord>(NAME_REFR);
+
+	auto worldEditorId = pLastWorld->GetEditorId();
+	auto worldName = pLastWorld->FindSubrecord<CLStringSubrecord>(NAME_FULL);
+	printf("\t\t%s has %zd REFR records\n", worldEditorId.c_str(), refs.size());
+
+	std::unordered_map<string, int> refCounts;
+
+	for (auto i : refs)
+	{
+		auto refId = i->GetRefId();
+		if (refId == 0) continue;
+		
+		auto editorId = FindRecordEditorId(espFile, refId);
+		if (editorId.empty()) continue;
+		refCounts[editorId]++;
+
+		//printf("\t\t\t%s\n", );
+	}
+
+	for (auto i : refCounts)
+	{
+		CsvFile.Printf("\"%s\",WRLD,\"%s\",\"%s\",%d\n", i.first.c_str(), worldName ? worldName->GetCString() : "", worldEditorId.c_str(), i.second);
+	}
+}
+
+
+void DumpRefUsesCells(CFile& CsvFile, CEspFile& espFile, CCellRecord* pCell, CGroup* pLastGroup)
+{
+	if (pCell == nullptr || pLastGroup == nullptr) return;
+
+	auto refs = pLastGroup->FindAllRecords<CRefrRecord>(NAME_REFR);
+
+	auto cellEditorId = pCell->GetEditorId();
+	auto cellName = pCell->FindSubrecord<CLStringSubrecord>(NAME_FULL);
+	printf("\t\t%s has %zd REFR records\n", cellEditorId.c_str(), refs.size());
+
+	std::unordered_map<string, int> refCounts;
+
+	for (auto i : refs)
+	{
+		auto refId = i->GetRefId();
+		if (refId == 0) continue;
+
+		auto editorId = FindRecordEditorId(espFile, refId);
+		if (editorId.empty()) continue;
+		refCounts[editorId]++;
+
+		//printf("\t\t\t%s\n", );
+	}
+
+	for (auto i : refCounts)
+	{
+		CsvFile.Printf("\"%s\",CELL,\"%s\",\"%s\",%d\n", i.first.c_str(), cellName ? cellName->GetCString() : "", cellEditorId.c_str(), i.second);
+	}
+}
+
+
+void DumpReferenceUses(CEspFile& espFile, const string Filename)
+{
+	auto pWorlds = espFile.GetTypeGroup(NAME_WRLD);
+	CFile File;
+
+	if (!File.Open(Filename, "wt")) return;
+
+	File.Printf("Reference, Parent, FullName, World/Cell, Uses\n");
+
+	CWrldRecord* pLastWorld = nullptr;
+	CGroup* pLastGroup = nullptr;
+
+	for (auto i : pWorlds->GetRecords())
+	{
+		//printf("%4.4s\n", (const char *)i->GetRecordType());
+
+		auto pWorld = dynamic_cast<CWrldRecord *>(i);
+		auto pGroup = dynamic_cast<CGroup *>(i);
+		if (pGroup == nullptr && pWorld == nullptr) continue;
+
+		if (pWorld != nullptr)
+		{
+			auto pEditorId = pWorld->GetEditorId();
+			printf("\tFound world %s\n", pEditorId.c_str());
+
+			pLastWorld = pWorld;
+			pLastGroup = nullptr;
+			continue;
+		}
+
+		if (pGroup != nullptr && pLastWorld == nullptr)
+		{
+			//printf("\t\tFound group\n");
+			pLastGroup = nullptr;
+			continue;
+		}
+
+		pLastGroup = pGroup;
+		DumpRefUsesWorldCells(File, espFile, pLastWorld, pLastGroup);
+
+		pLastWorld = nullptr;
+		pLastGroup = nullptr;
+	}
+
+	auto pCells = espFile.GetTypeGroup(NAME_CELL);
+	CCellRecord* pLastCell = nullptr;
+	pLastGroup = nullptr;
+
+	for (auto i : pCells->GetRecords())
+	{
+		auto pGroup1 = dynamic_cast<CGroup *>(i);
+		if (pGroup1 == nullptr) continue;
+
+		for (auto j : pGroup1->GetRecords())
+		{
+			auto pGroup2 = dynamic_cast<CGroup *>(j);
+			if (pGroup2 == nullptr) continue;
+
+			for (auto k : pGroup2->GetRecords())
+			{
+				auto pCell = dynamic_cast<CCellRecord *>(k);
+				auto pGroup = dynamic_cast<CGroup *>(k);
+				if (pGroup == nullptr && pCell == nullptr) continue;
+
+				if (pCell != nullptr)
+				{
+					auto pEditorId = pCell->GetEditorId();
+					printf("\tFound cell %s\n", pEditorId.c_str());
+
+					pLastCell = pCell;
+					pLastGroup = nullptr;
+					continue;
+				}
+
+				if (pGroup != nullptr && pLastCell == nullptr)
+				{
+					//printf("\t\tFound cell group\n");
+					pLastGroup = nullptr;
+					continue;
+				}
+
+				pLastGroup = pGroup;
+				DumpRefUsesCells(File, espFile, pLastCell, pLastGroup);
+
+				pLastCell = nullptr;
+				pLastGroup = nullptr;
+			}
+		}
+
+	}
+
+}
+
+
 void DumpLvliWeapons(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_LVLI);
@@ -2807,9 +2968,15 @@ int main()
 	//espFile.Load("C:\\Downloads\\Starfield\\BlueprintShips-Starfield.esm");
 	//espFile.OutputStats("BlueprintShips-Starfield_Stats.txt");
 
-	espFile.Load("C:\\Downloads\\Starfield\\Starfield.esm");
-	//espFile.Load("C:\\Program Files(x86)\\Steam\\steamapps\\common\\Starfield\\Data\\Starfield.esm"); 
+	//bool Result = espFile.Load("C:\\Downloads\\Starfield\\Starfield.esm");
+	//bool Result = espFile.Load("C:\\Program Files (x86)\\Steam\\steamapps\\common\\Starfield\\Data\\SFBGS003.esm"); 
+	bool Result = espFile.Load("C:\\Program Files (x86)\\Steam\\steamapps\\common\\Starfield\\Data\\Starfield.esm"); 
+
+	if (!Result) { printf("\tFailed to load ESM file!\n");  return -1; }
+
 	//espFile.OutputStats("Starfield_Stats.txt");
+
+	DumpReferenceUses(espFile, "RefUses.csv");
 
 	//DumpStructure(espFile, "Structure.txt");
 
@@ -2848,10 +3015,11 @@ int main()
 	//DumpPlanets(espFile, "Planets.csv");
 	//espFile.SaveRaw("Planets.esm", NAME_PNDT);
 
-	DumpQuests(espFile, "Quests2.csv");
-	//DumpQuestStages(espFile, "QuestStages.csv");
-	//DumpQuestObjectives(espFile, "QuestObjectives.csv");
-	//DumpQuestScripts(espFile, "QuestScripts.csv");
+	//DumpQuests(espFile, "Quests3.csv");
+	//DumpQuestStages(espFile, "QuestStages3.csv");
+	//DumpQuestObjectives(espFile, "QuestObjectives3.csv");
+	//DumpQuestScripts(espFile, "QuestScripts3.csv");
+
 
 	//DumpFlora(espFile, "Flora.csv");
 
@@ -2907,4 +3075,3 @@ int main()
 	*/
   
 }
-

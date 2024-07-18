@@ -1,0 +1,6 @@
+QuestFormID, QuestEditorID, QuestName, Script, Fragment
+0xFD00004A,"SFBGS003_MB_EliteBounty01_WantedDead","Wanted: Criminal on <Alias=TargetPlanetLocation>","MissionBountyQuestScript",
+0xFD00004A,"SFBGS003_MB_EliteBounty01_WantedDead","Wanted: Criminal on <Alias=TargetPlanetLocation>","SFBGS003_SQ_Bounty_QuestScript",
+0xFD00283B,"SFBGS003_MB_EliteBounty02_WantedAlive","Wanted: Criminal on <Alias=TargetPlanetLocation>","MissionBountyQuestScript",
+0xFD00283B,"SFBGS003_MB_EliteBounty02_WantedAlive","Wanted: Criminal on <Alias=TargetPlanetLocation>","SFBGS003_SQ_Bounty_QuestScript",
+0xFD007A0E,"SFBGS003_SQ_WantedPosters","Wanted Posters System Quest","SFBGS003:SFBGS003_SQ_WantedPostersQuestScript",

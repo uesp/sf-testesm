@@ -206,6 +206,7 @@
     <ClCompile Include="..\..\Library\modfile\records\QustRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\RaceRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\record.cpp" />
+    <ClCompile Include="..\..\Library\modfile\records\RefrRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\SpelRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\StdtRecord.cpp" />
     <ClCompile Include="..\..\Library\modfile\records\SunpRecord.cpp" />
@@ -283,6 +284,7 @@
     <ClInclude Include="..\..\Library\modfile\records\QustRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\RaceRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\record.h" />
+    <ClInclude Include="..\..\Library\modfile\records\RefrRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\SpelRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\StdtRecord.h" />
     <ClInclude Include="..\..\Library\modfile\records\SunpRecord.h" />

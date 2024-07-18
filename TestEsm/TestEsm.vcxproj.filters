@@ -270,6 +270,9 @@
     <ClCompile Include="..\..\Library\modfile\records\LvliRecord.cpp">
       <Filter>Source Files\ModFile\Records</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Library\modfile\records\RefrRecord.cpp">
+      <Filter>Source Files\ModFile\Records</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Library\common\file.h">
@@ -577,6 +580,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Library\modfile\subrecords\LlkcSubrecord.h">
       <Filter>Header Files\ModFile\Subrecords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Library\modfile\records\RefrRecord.h">
+      <Filter>Header Files\ModFile\Records</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
