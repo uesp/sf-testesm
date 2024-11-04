@@ -1,5 +1,7 @@
 #include <iostream>
 #include <algorithm>
+#include <filesystem>
+#include <Windows.h>
 
 #include "common/types.h"
 #include "common/platform.h"
@@ -50,6 +52,8 @@
 #include "modfile/records/wrldrecord.h"
 
 using namespace sfwiki;
+using std::string;
+using std::vector;
 
 /*
 BOOK
@@ -180,6 +184,8 @@ void DumpBooks(CEspFile& espFile, const string Filename)
 	auto pBooks = espFile.GetTypeGroup(NAME_BOOK);
 	CFile File;
 
+	if (pBooks == nullptr || pBooks->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("Found %d Books!\n", (int) pBooks->GetNumRecords());
@@ -209,6 +215,8 @@ void DumpBooksCsv(CEspFile& espFile, const string Filename)
 {
 	auto pBooks = espFile.GetTypeGroup(NAME_BOOK);
 	CFile File;
+
+	if (pBooks == nullptr || pBooks->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -260,6 +268,11 @@ void DumpBookFiles(CEspFile& espFile, const string Path)
 	CFile File;
 	string Filename;
 
+	if (pBooks == nullptr || pBooks->GetNumRecords() == 0) return;
+
+	printf("Exporting Book Texts to '%s'...\n", Path.c_str());
+	CreateDirectory(Path.c_str(), nullptr);
+
 	for (auto i : pBooks->GetRecords())
 	{
 		auto pBook = dynamic_cast<CBookRecord *>(i);
@@ -282,6 +295,8 @@ void DumpWeapons(CEspFile& espFile, const string Filename)
 {
 	auto pWeapons = espFile.GetTypeGroup(NAME_WEAP);
 	CFile File;
+
+	if (pWeapons == nullptr || pWeapons->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -364,6 +379,8 @@ void DumpAmmo(CEspFile& espFile, const string Filename)
 	auto pAmmos = espFile.GetTypeGroup(NAME_AMMO);
 	CFile File;
 
+	if (pAmmos == nullptr || pAmmos->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Name, Desc, ONAM, Value, Weight, Model\n");
@@ -415,6 +432,8 @@ void DumpArmors(CEspFile& espFile, const string Filename)
 	auto pArmors = espFile.GetTypeGroup(NAME_ARMO);
 	CFile File;
 
+	if (pArmors == nullptr || pArmors->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Name, Value, Weight, Unknown3, Model\n");
@@ -462,6 +481,8 @@ void DumpFurnitures(CEspFile& espFile, const string Filename)
 	auto pFurnitures = espFile.GetTypeGroup(NAME_FURN);
 	CFile File;
 
+	if (pFurnitures == nullptr || pFurnitures->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Name, Model\n");
@@ -495,6 +516,8 @@ void DumpMisc(CEspFile& espFile, const string Filename)
 {
 	auto pMiscs = espFile.GetTypeGroup(NAME_MISC);
 	CFile File;
+
+	if (pMiscs == nullptr || pMiscs->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -540,6 +563,8 @@ void DumpNpcs(CEspFile& espFile, const string Filename)
 {
 	auto pNpcs = espFile.GetTypeGroup(NAME_NPC_);
 	CFile File;
+
+	if (pNpcs == nullptr || pNpcs->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -618,6 +643,8 @@ void DumpRaces(CEspFile& espFile, const string Filename)
 	auto pRaces = espFile.GetTypeGroup(NAME_RACE);
 	CFile File;
 
+	if (pRaces == nullptr || pRaces->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Name, Desc\n");
@@ -653,6 +680,8 @@ void DumpFactions(CEspFile& espFile, const string Filename)
 	auto pFactions = espFile.GetTypeGroup(NAME_FACT);
 	CFile File;
 
+	if (pFactions == nullptr || pFactions->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Name\n");
@@ -683,6 +712,8 @@ void DumpClasses(CEspFile& espFile, const string Filename)
 {
 	auto pClasses = espFile.GetTypeGroup(NAME_CLAS);
 	CFile File;
+
+	if (pClasses == nullptr || pClasses->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -719,9 +750,11 @@ void DumpMagicEffects(CEspFile& espFile, const string Filename)
 	auto pEffects = espFile.GetTypeGroup(NAME_MGEF);
 	CFile File;
 
+	if (pEffects == nullptr || pEffects->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
-	File.Printf("FormID, EditorID, Description, Name");
+	File.Printf("FormID, EditorID, Name, Description");
 	for (int i = 0; i < MGEFDATA_SUBRECORD_SIZE / 4; ++i) File.Printf(", Unknown%d", i+1);
 	File.Printf("\n");
 	
@@ -740,7 +773,7 @@ void DumpMagicEffects(CEspFile& espFile, const string Filename)
 
 		trim(FullName);
 		trim(DescText);
-		EscapeCsv(DescText);
+		DescText = EscapeCsv(DescText);
 
 		File.Printf(",\"%s\"", pEditorID ? pEditorID->GetString().c_str() : "");
 		File.Printf(",\"%s\"", FullName.c_str());
@@ -773,6 +806,8 @@ void DumpSettings(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_GMST);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -819,6 +854,8 @@ void DumpEquipSlots(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_EQUP);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Data\n");
@@ -851,6 +888,8 @@ void DumpBioms(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_BIOM);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Full, SNAM\n");
@@ -870,7 +909,7 @@ void DumpBioms(CEspFile& espFile, const string Filename)
 
 		trim(FullName);
 		trim(SnamText);
-		//EscapeCsv(DescText);
+		//DescText = EscapeCsv(DescText);
 
 		File.Printf(",\"%s\"", pEditorID ? pEditorID->GetString().c_str() : "");
 		File.Printf(",\"%s\"", FullName.c_str());
@@ -886,6 +925,8 @@ void DumpSpells(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_SPEL);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -931,6 +972,8 @@ void DumpEnchants(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_ENCH);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Name, Data1, Data2, Data3, Data4, Data5, Data6, Data7\n");
@@ -975,6 +1018,8 @@ void DumpAlchemy(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_ALCH);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Name, Description, Weight");
@@ -997,7 +1042,7 @@ void DumpAlchemy(CEspFile& espFile, const string Filename)
 
 		trim(FullName);
 		trim(DescText);
-		EscapeCsv(DescText);
+		DescText = EscapeCsv(DescText);
 
 		File.Printf(",\"%s\"", pEditorID ? pEditorID->GetString().c_str() : "");
 		File.Printf(",\"%s\"", FullName.c_str());
@@ -1039,6 +1084,8 @@ void DumpAvif(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_AVIF);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Name, Flags\n");
@@ -1074,6 +1121,8 @@ void DumpWorlds(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_WRLD);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Name, Flags\n");
@@ -1108,6 +1157,8 @@ void DumpLocations(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_LCTN);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -1159,6 +1210,8 @@ void DumpStars(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_STDT);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -1249,6 +1302,8 @@ void DumpSunPresets(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_SUNP);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Parent\n");
@@ -1277,6 +1332,8 @@ void DumpPlanets(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_PNDT);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -1406,6 +1463,8 @@ void DumpQuests(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_QUST);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 	if (pRecords == nullptr) return;
 
@@ -1438,6 +1497,8 @@ void DumpQuestStages(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_QUST);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 	if (pRecords == nullptr) return;
@@ -1494,6 +1555,8 @@ void DumpQuestObjectives(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_QUST);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 	if (pRecords == nullptr) return;
 
@@ -1544,6 +1607,8 @@ void DumpQuestScripts(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_QUST);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 	if (pRecords == nullptr) return;
 
@@ -1578,6 +1643,8 @@ void DumpFlora(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_FLOR);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Name, Model\n");
@@ -1608,6 +1675,8 @@ void DumpPerks(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_PERK);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -1658,6 +1727,8 @@ void DumpLoadingScreens(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_LSCR);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Description, Icon\n");
@@ -1688,6 +1759,8 @@ void DumpCells(CEspFile& espFile, const string Filename)
 	auto Records = espFile.FindAllRecords(NAME_CELL);
 	CFile File;
 
+	if (Records.size() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Full, Data\n");
@@ -1717,6 +1790,8 @@ void DumpGbfm(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_GBFM);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -1749,6 +1824,8 @@ void DumpFlst(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_FLST);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -2046,6 +2123,8 @@ void DumpDialogue(CEspFile& espFile, const string Filename)
 	CQustRecord* pLastQuest = nullptr;
 	CFile File;
 
+	if (pQuests == nullptr || pQuests->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("Type, QuestEditorID, QuestName, FormId, EditorId, Flags, Priority, QNAM, BNAM, Subtype, FULL, InfoNum, InfoFormId, InfoEditorId, InfoPerk, InfoFaction, InfoNam1, InfoNam2, InfoNam3, InfoGNamForm, InfoGNamEditorId\n");
@@ -2153,6 +2232,8 @@ void DumpCobj(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_COBJ);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -2288,6 +2369,8 @@ void DumpTerm(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_TERM);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Full, Model, TMLM\n");
@@ -2330,6 +2413,8 @@ void DumpTmlm(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_TMLM);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -2434,6 +2519,8 @@ void DumpIres(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_IRES);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Full, Short, FNAM, Nam1, Nam2, Nam3, SNAM, TINC, CNAM\n");
@@ -2477,6 +2564,8 @@ void DumpOmod(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_OMOD);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -2537,6 +2626,8 @@ void DumpOmodProperties(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_OMOD);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -2621,6 +2712,8 @@ void DumpCreatures(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_NPC_);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("FormID, EditorID, Full, Keywords\n");
@@ -2645,6 +2738,8 @@ void DumpLvli(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_LVLI);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -2696,6 +2791,8 @@ void DumpLvliEntries(CEspFile& espFile, const string Filename)
 {
 	auto pRecords = espFile.GetTypeGroup(NAME_LVLI);
 	CFile File;
+
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
 
 	if (!File.Open(Filename, "wt")) return;
 
@@ -2806,6 +2903,8 @@ void DumpReferenceUses(CEspFile& espFile, const string Filename)
 	auto pWorlds = espFile.GetTypeGroup(NAME_WRLD);
 	CFile File;
 
+	if (pWorlds == nullptr || pWorlds->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("Reference, Parent, FullName, World/Cell, Uses\n");
@@ -2900,6 +2999,8 @@ void DumpLvliWeapons(CEspFile& espFile, const string Filename)
 	auto pRecords = espFile.GetTypeGroup(NAME_LVLI);
 	CFile File;
 
+	if (pRecords == nullptr || pRecords->GetNumRecords() == 0) return;
+
 	if (!File.Open(Filename, "wt")) return;
 
 	File.Printf("LvliFormID, LvliEditorID, Index\n");
@@ -2952,9 +3053,149 @@ void DumpLvliWeapons(CEspFile& espFile, const string Filename)
 }
 
 
+std::string stripExtension(const std::string &filePath) {
+	return { filePath, 0, filePath.rfind('.') };
+}
+
+
+bool ExtractBatchFile(string baseDir, string filename, string outputPath)
+{
+	string fullFilename = baseDir + filename;
+	CEspFile espFile;
+	string baseFilename = stripExtension(filename) + "\\";
+
+	bool Result = espFile.Load(fullFilename);
+	if (!Result) { printf("\tERROR: Failed to load ESM file '%s'!\n", fullFilename.c_str());  return false; }
+
+	printf("\tSuccessfully loaded ESM file '%s'!\n", fullFilename.c_str());
+
+	CreateDirectory(outputPath.c_str(), NULL);
+	CreateDirectory((outputPath + baseFilename).c_str(), NULL);
+
+	espFile.OutputStats(outputPath + baseFilename + "Stats.txt");
+	DumpStructure(espFile, outputPath + baseFilename + "Structure.txt");
+	
+		//DumpBooks(espFile, outputPath + baseFilename + "_Books.txt");
+	DumpBookFiles(espFile, outputPath + baseFilename + "/Books/");
+	/*
+	DumpBooksCsv(espFile, outputPath + baseFilename + "Books.csv");
+
+	DumpWeapons(espFile, outputPath + baseFilename + "Weapons.csv");
+	DumpAmmo(espFile, outputPath + baseFilename + "Ammo.csv");
+	DumpArmors(espFile, outputPath + baseFilename + "Armors.csv");
+	DumpFurnitures(espFile, outputPath + baseFilename + "Furniture.csv");
+	DumpMisc(espFile, outputPath + baseFilename + "Misc.csv");
+	DumpNpcs(espFile, outputPath + baseFilename + "Npcs.csv");
+	DumpRaces(espFile, outputPath + baseFilename + "Races.csv");
+	DumpFactions(espFile, outputPath + baseFilename + "Factions.csv");
+	DumpClasses(espFile, outputPath + baseFilename + "Classes.csv");
+	DumpMagicEffects(espFile, outputPath + baseFilename + "Effects.csv");
+	DumpSettings(espFile, outputPath + baseFilename + "Settings.csv");
+	DumpEquipSlots(espFile, outputPath + baseFilename + "EquipSlots.csv");
+	DumpBioms(espFile, outputPath + baseFilename + "Bioms.csv");
+	DumpSpells(espFile, outputPath + baseFilename + "Spells.csv");
+	DumpEnchants(espFile, outputPath + baseFilename + "Enchants.csv");
+	DumpAlchemy(espFile, outputPath + baseFilename + "Alchemy.csv");
+	DumpAvif(espFile, outputPath + baseFilename + "ActorValues.csv");
+	DumpWorlds(espFile, outputPath + baseFilename + "Worlds.csv");
+	DumpLocations(espFile, outputPath + baseFilename + "Locations.csv");
+	DumpSunPresets(espFile, outputPath + baseFilename + "SunPresets.csv");
+	DumpStars(espFile, outputPath + baseFilename + "Stars.csv");
+	DumpPlanets(espFile, outputPath + baseFilename + "Planets.csv");
+
+	DumpQuests(espFile, outputPath + baseFilename + "Quests.csv");
+	DumpQuestStages(espFile, outputPath + baseFilename + "QuestStages.csv");
+	DumpQuestObjectives(espFile, outputPath + baseFilename + "QuestObjectives.csv");
+	//DumpQuestScripts(espFile, outputPath + baseFilename + "QuestScripts3.csv");
+
+	DumpFlora(espFile, outputPath + baseFilename + "Flora.csv");
+	DumpPerks(espFile, outputPath + baseFilename + "Perks.csv");
+	DumpLoadingScreens(espFile, outputPath + baseFilename + "LoadingScreens.csv");
+	DumpCells(espFile, outputPath + baseFilename + "Cells.csv");
+	DumpReferenceUses(espFile, outputPath + baseFilename + "RefUses.csv");
+	DumpGbfm(espFile, outputPath + baseFilename + "Gbfm.csv");
+	DumpFlst(espFile, outputPath + baseFilename + "Flst.csv");
+
+	DumpDialogue(espFile, outputPath + baseFilename + "Dialogue.csv");
+	DumpTerm(espFile, outputPath + baseFilename + "Term.csv");
+	DumpTmlm(espFile, outputPath + baseFilename + "Tmlm.csv");
+
+	DumpIres(espFile, outputPath + baseFilename + "Ires.csv");
+	DumpCobj(espFile, outputPath + baseFilename + "Cobj.csv");
+
+	DumpOmod(espFile, outputPath + baseFilename + "Omod.csv");
+	DumpOmodProperties(espFile, outputPath + baseFilename + "OmodProperties.csv");
+
+	DumpCreatures(espFile, outputPath + baseFilename + "Fauna.csv");
+
+	DumpLvli(espFile, outputPath + baseFilename + "Lvli.csv");
+	DumpLvliEntries(espFile, outputPath + baseFilename + "LvliEntries.csv");
+	DumpLvliWeapons(espFile, outputPath + baseFilename + "LvliWeapons.csv");
+	*/
+	return true;
+}
+
+
+void ExtractBatch1()
+{
+	string baseDir = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Starfield\\Data\\";
+	string outputPath = "C:\\Temp\\Starfield\\ExportBatch1\\";
+	vector<string> files = {
+		"sfbgs00a_a.esm",
+		"sfbgs00a_d.esm",
+		"sfbgs00a_e.esm",
+		"sfbgs00a_f.esm",
+		"sfbgs00a_j.esm",
+		"sfbgs00b.esm",
+		"sfbgs00e.esm",
+		"sfbgs00f_a.esm",
+		"sfbgs01b.esm",
+		"sfbgs01c.esm",
+		"sfbgs02a_a.esm",
+		"sfbgs02b_a.esm",
+		"SFBGS003.esm",
+		"SFBGS004.esm",
+		"SFBGS006.esm",
+		"SFBGS007.esm",
+		"SFBGS008.esm",
+		"sfbgs009.esm",
+		"sfbgs021.esm",
+		"sfbgs023.esm",
+		"sfbgs031.esm",
+		"sfta01.esm" };
+
+	for (auto & i : files)
+	{
+		ExtractBatchFile(baseDir, i, outputPath);
+	}
+}
+
+
+void ExtractBatch2()
+{
+	string baseDir = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Starfield\\Data\\";
+	string outputPath = "C:\\Temp\\Starfield\\ExportBatch2\\";
+	vector<string> files = {
+		"SFBGS004.esm",
+		"SFBGS003.esm",
+		"SFBGS008.esm",
+		"Starfield.esm",
+		"ShatteredSpace.esm",
+		};
+
+	for (auto & i : files)
+	{
+		ExtractBatchFile(baseDir, i, outputPath);
+	}
+}
+
+
 int main()
 {
 	SystemLog.Open("testesm.log");
+
+	ExtractBatch2();
+	return 0;
 
 	CEspFile espFile;
 	CStringFile strings;
